@@ -1,0 +1,354 @@
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayWithEasy</title>
+   <link rel="stylesheet" href="home.css">
+      <link rel="stylesheet" href="topStyle.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+         #greeting { 
+            margin-top: 20px; 
+			color:#e7eaea;
+        }
+        .hidden { 
+            display: none;
+        }
+        #registerForm, #loginForm {
+            margin-top: 20px;
+        }
+        .error { 
+            color: red; 
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="date"] {
+            width: 100%; /* Устанавливаем ширину ввода на 100% */
+            max-width: 300px; /* Максимальная ширина 300 пикселей */
+            padding: 10px; /* Добавляем внутренние отступы */
+            margin-bottom: 10px; /* Отступ снизу */
+            border: 1px solid #ccc; /* Цвет рамки */
+            border-radius: 4px; /* Скругление углов рамки */
+        }
+        button {
+            padding: 10px 15px; /* Внутренние отступы для кнопки */
+            background-color: #183e4b; /* Цвет фона кнопки */
+            color: white; /* Цвет текста кнопки */
+            border: none; /* Без рамки */
+            border-radius: 4px; /* Скругление углов кнопки */
+            cursor: pointer; /* П pointer на кнопку */
+        }
+        button:hover {
+            background-color: #999; /* Светлее, когда курсор над кнопкой */
+    </style>
+</head>
+<body>
+<div class="banner">
+		<img id="logo" src="images\logo.png" width="70" height="70">
+        <div class="banner-text">
+            <h1 style="color: #d74a49">PlayWithEasy</h1>
+            <p class="subtitle">Говорим на языке казуальных игр!</p>  
+        </div>
+    </div>
+   <div class = "text-color">
+        <div class="red-menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="games.html">Каталог игр</a></li>
+            <li><a href="about.html">О нас</a></li>
+          <li><a href="question.html">ЧаВо</a></li>
+		  <li><a href="univer.html">Обучение</a></li>
+		  <li><a href="city.html">Работа</a></li>
+
+
+<div id="greeting"></div>
+<div id="registerForm" class="hidden"></div>
+<div id="loginForm" class="hidden"></div>
+<div id="logoutButton" class="hidden">
+    <button onclick="logout()">Выйти</button>
+</div>
+<script>
+    window.onload = function () {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
+            displayGreeting(user);
+        } else {
+            showRegistrationForm();
+        }
+    };
+
+    function showRegistrationForm() {
+        const registerForm = document.getElementById('registerForm');
+        registerForm.innerHTML = `
+            <h2>Регистрация</h2>
+            <label for="username">Введите ваше имя:</label>
+            <input type="text" id="username" required><br>
+            <label for="birthDate">Введите вашу дату рождения (ГГГГ-ММ-ДД):</label>
+            <input type="date" id="birthDate" required><br>
+            <label for="password">Введите пароль:</label>
+            <input type="password" id="password" required><br>
+            <button onclick="register()">Зарегистрироваться</button>
+        `;
+        registerForm.classList.remove('hidden');
+    }
+
+    function register() {
+        const username = document.getElementById('username').value;
+        const birthDate = document.getElementById('birthDate').value;
+        const password = document.getElementById('password').value;
+
+        if (!username || !birthDate || !password) return;
+
+        const user = { username, birthDate, password };
+        checkBirthday(new Date(birthDate), user);
+    }
+
+    function checkBirthday(birthDate, user) {
+        const today = new Date();
+        if (today.getMonth() === birthDate.getMonth() && today.getDate() === birthDate.getDate()) {
+            user.promoCode = generatePromoCode();
+            alert(`Поздравляем! Получите промокод на игры в Steam после авторизации!`);
+        }
+        localStorage.setItem('user', JSON.stringify(user));
+        showLoginForm();
+    }
+
+    function generatePromoCode() {
+        return 'PROMO-' + Math.random().toString(36).substr(2, 5).toUpperCase();
+    }
+
+    function showLoginForm() {
+        const registerForm = document.getElementById('registerForm');
+        const loginForm = document.getElementById('loginForm');
+
+        registerForm.classList.add('hidden');
+        loginForm.innerHTML = `
+            <h2>Вход</h2>
+            <label for="loginUsername">Введите имя пользователя:</label>
+            <input type="text" id="loginUsername" required><br>
+            <label for="loginPassword">Введите пароль:</label>
+            <input type="password" id="loginPassword" required><br>
+            <button onclick="login()">Вход</button>
+            <div id="loginError" class="error"></div>
+        `;
+        loginForm.classList.remove('hidden');
+    }
+
+    function login() {
+	
+        const username = document.getElementById('loginUsername').value;
+        const password = document.getElementById('loginPassword').value;
+        const user = JSON.parse(localStorage.getItem('user'));
+
+        const errorDiv = document.getElementById('loginError');
+        if (user && user.username === username && user.password === password) {
+            displayGreeting(user);
+            errorDiv.innerHTML = ""; // Скрываем ошибку
+        } else {
+            errorDiv.innerHTML = "Неправильный логин или пароль";
+        }
+    }
+
+    function displayGreeting(user) {
+        const greeting = getGreeting();
+        document.getElementById('greeting').innerHTML = `
+            <h2>${greeting}, ${user.username}!</h2>
+            ${user.promoCode ? `<p>Ваш промокод: ${user.promoCode}</p>` : ""}
+        `;
+        document.getElementById('loginForm').classList.add('hidden');
+        document.getElementById('logoutButton').classList.remove('hidden');
+    }
+
+    function getGreeting() {
+        const hours = new Date().getHours();
+        if (hours < 12) return 'Доброе утро';
+        if (hours < 18) return 'Добрый день';
+        return 'Добрый вечер';
+    }
+    function logout() {
+        localStorage.removeItem('user');
+        alert('Вы вышли из системы.');
+        window.location.reload();
+    }
+</script>
+</div> </ul> </div>
+
+
+	</center>
+	<center><h1>Праздник видеоигр</h1>
+<h3>24.05</h3>
+    <div id="message" class="celebration"></div>
+
+    <script>
+        // Получаем текущую дату
+        const today = new Date();
+        const month = today.getMonth() + 1; // Месяцы начинаются с 0
+        const day = today.getDate();
+
+        // Определяем, является ли сегодня 8 июля
+        if (month === 7 && day === 8) {
+            document.getElementById('message').innerText = 'С днём видеоигр! Играйте и развивайтесь!';
+        } else {
+            document.getElementById('message').innerText = 'Сегодня не день видеоигр, но играйте на здоровье!';
+        }
+    </script>
+	</center>
+<center><h1>Лучший источник для помощи в играх</h1></center>
+
+<center><p>PlayWithEasy предоставит вам множество полезных гайдов, советов по прохождению, обзоры игр и помощь от сообщества</p></center>
+
+       <div class="image-block">
+           <center><h1>Популярные игры</h1></center>
+         <div class="image-top">
+        <div class="dish-card">
+    <div class="image-item"><img src="images\1.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49">Life is Strange</h3>
+    <p style="color:#eaeaea">- эпизодическая компьютерная игра с элементами приключения в жанре интерактивного кино.</p>
+  </div>
+    </div></div>
+<div class="dish-card">
+    <div class="image-item"><img src="images\2.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49">Milk outside a bag of milk</h3>
+    <p style="color:#eaeaea">- это психологическая визуальная новелла.</p>
+  </div>
+    </div></div>
+<div class="dish-card">
+    <div class="image-item"><img src="images\3.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49">Neighbours back From Hell</h3>
+    <p style="color:#eaeaea">- это компьютерная игра-аркада.</p>
+  </div>
+    </div></div>
+<div class="dish-card">
+    <div class="image-item"><img src="images\4.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49">The Henry Stickmin</h3>
+    <p style="color:#eaeaea">- компьютерная игра в жанре квеста.</p>
+  </div>
+    </div></div>
+<div class="dish-card">
+    <div class="image-item"><img src="images\5.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49">Yume Nikki</h3>
+    <p style="color:#eaeaea">- бесплатная компьютерная инди-игра, сюрреалистический квест.</p>
+  </div>
+    </div></div>
+<div class="dish-card">
+    <div class="image-item"><img src="images\6.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49">My Child Lebensborn</h3>
+    <p style="color:#eaeaea">- - компьютерная игра в жанре симулятора питомца.</p>
+  </div>
+    </div></div>
+    </div>
+
+<center><h1>Все игры</h1></center>
+      <div class="image-top">
+        <div class="dish-card">
+    <div class="image-item"><img src="images\7.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49">Peace, Death!</h3>
+    <p style="color:#eaeaea">- компьютерная игра в жанре аркады.</p>
+  </div>
+    </div></div>
+<div class="dish-card">
+    <div class="image-item"><img src="images\8.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49">Sven Co-op</>
+    <p style="color:#eaeaea">- кооперативная модификация для шутера от первого лица Half-Life.</p>
+  </div>
+    </div></div>
+<div class="dish-card">
+    <div class="image-item"><img src="images\9.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49">Five Nights at Freddy's: Help Wanted</h3>
+    <p style="color:#eaeaea">- компьютерная игра в жанре survival horror для очков виртуальной реальности.</p>
+  </div>
+    </div></div>
+<div class="dish-card">
+    <div class="image-item"><img src="images\10.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49">The Witch's House MV</h3>
+    <p style="color:#eaeaea">-  головоломка в жанре хоррора.</p>
+  </div>
+    </div></div>
+<div class="dish-card">
+    <div class="image-item"><img src="images\1.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49">Life is Strange</h3>
+    <p style="color:#eaeaea">- эпизодическая компьютерная игра с элементами приключения в жанре интерактивного кино.</p>
+  </div>
+    </div></div>
+<div class="dish-card">
+    <div class="image-item"><img src="images\4.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49">The Henry Stickmin</h3>
+    <p style="color:#eaeaea">- компьютерная игра в жанре квеста.</p>
+  </div>
+    </div></div>
+    </div>
+
+           <center><h1>Как PlayWithEasy помогает вам</h1></center>
+          <div class="country-descriptions">
+        <div class="country-card">
+            <h3>Доступные инструкции</h3>
+           <p style="color:#eaeaea">Все наши гайды написаны понятным языком и структурированы так, чтобы каждый мог легко следовать им, улучшая свои навыки и игровую стратегию.</p>
+        </div>
+        <div class="country-card">
+            <h3>Бесплатный доступ</h3>
+           <p style="color:#eaeaea">Весь контент на нашем сайте доступен совершенно бесплатно, что позволяет каждому насладиться геймингом без дополнительных затрат.</p>
+        </div>
+        <div class="country-card">
+            <h3>Полезные советы для разнообразных платформ</h3>
+           <p style="color:#eaeaea">Наши гайды охватывают игры на различных платформах — от мобильных устройств до ПК, так что вы сможете найти информацию, соответствующую вашим предпочтениям.</p>
+        </div>
+    </div>
+
+
+    <div class="image-links-container">
+        <a href="#" class="image-link">
+<img src="images\dzen.png" / width="50" height="30">
+        </a>
+<a href="#" class="image-link">
+<img src="images\odnok.png" / width="50" height="30">
+        </a>
+        <a href="#" class="image-link">
+<img src="images\vk.png" / width="50" height="30">
+        </a>
+        <a href="#" class="image-link">
+<img src="images\twitter.png" / width="50" height="30">
+        </a>
+    </div>
+
+
+
+         <footer>
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">PlayWithEasy</h3>
+  <p style="color: #8ba0a4">Добро пожаловать на наш сайт, посвященный казуальным играм! На нашем портале вы сможете ознакомиться с подробными гайдами и стратегиями, которые помогут вам преодолеть сложные уровни и добиться успеха.</p>
+  </div>
+
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">Связь</h3>
+    <a href="china">Главная</a>
+    <a href="japan">Профиль</a>
+    <a href="korea">Свяжитесь с нами</a>
+  </div>
+
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">Социальные медиа</h3>
+    <a href="#">Яндекс.Дзен</a>
+    <a href="#" >Одноклассники</a>
+      <a href="#">Твиттер</a>
+      <a href="#">ВКонтакте</a>
+  </div>
+
+  <div class="footer-copyright">
+    Copyright © 2024 PlayWithEasy
+  </div>
+</footer>
+</body>
+</html>
