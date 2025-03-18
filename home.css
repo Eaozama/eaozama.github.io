@@ -1,0 +1,594 @@
+
+#itemImage {
+	height: 260px;
+	width: 160px;
+}
+
+.display {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+table {
+	border-spacing: 20px;
+}
+
+#productName {
+	text-align: center;
+	font-weight: bold;
+}
+
+#productPrice {
+	text-align: center;
+}
+
+.displayCategory ul li {
+	font-size: 15px;
+}
+/* документ */
+html, body {
+	font-family: 'Arial';
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+    background-color: #eaeaea;
+}
+/* текст */
+a:hover {
+	color: #d74a49;
+	text-decoration: underline;
+}
+.menu1 {
+    color: #eaeaea;
+    background-color: #b2bcd2;
+    padding: 10px;
+}
+.text-color {
+  color: #183e4b;
+}
+/*секции для информации*/
+.section {
+    background-color: #8ba0a4;
+    padding: 20px;
+    margin: 10px;
+}
+/*для страниц сайта*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea; /* розовый основной цвет сайта */
+}
+/* баннер */
+.banner {
+    background-color: #183e4b;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo {
+    width: 70px; /* Adjust the width to your desired size */
+    height: 70px;
+    margin-right: 20px;
+}
+
+.banner-text {
+    display: inline-block;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.subtitle {
+    color: #eaeaea;
+    margin: 0;
+}
+/* информация */
+.info {
+    background-color: #8ba0a4; /* черный цвет блока с информацией */
+    color: #183e4b; /* белый цвет текста */
+    text-align: center;
+    padding: 50px;
+    margin: 10px; /* Отступы, чтобы блоки были сплющены */
+}
+/* ссылки */
+a, a:link, a:visited {
+  color: #183e4b;
+  text-decoration: none;
+}
+
+
+.info {
+    background-color: #d74a49; /* цвет блока с информацией */
+    color: #183e4b; /* цвет текста */
+    text-align: center;
+    padding: 50px;
+    margin: 10px; /* Отступы, чтобы блоки были сплющены */
+}
+
+red-menu {
+    background-color: #d74a49; /* цвет */
+    text-align: center;
+}
+
+.red-menu ul {
+    background-color: #d74a49;
+    list-style: none;
+    padding: 15;
+    margin: 0;
+}
+
+.red-menu ul li {
+    background-color: #d74a49;
+    display: inline;
+}
+
+.red-menu ul li a {
+    display: inline-block;
+    padding: 10px 70px;
+    text-decoration: none;
+    background-color: #d74a49;
+    color: #eaeaea; /* Белый цвет текста */
+    font-size: 20px
+}
+/* конец меню */
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.block {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+ .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.block2 {
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #d74a49;
+    text-align: center;
+}
+dl {
+   margin-top: 1em;
+   margin-bottom: 1em;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+.image-link {
+    display: inline-block;
+    position: relative;
+}
+
+.image2 {
+    display: block;
+    max-width: 100%; /* Максимальная ширина изображения */
+    height: auto; /* Автоматическая высота */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон */
+    padding: 10px 20px; /* Внутренние отступы для текста */
+    color: #183e4b; /* Черный цвет текста */
+    font-size: 20px; /* Размер шрифта */
+}
+.profile3 {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+/* аватар */
+.avatar3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Сделать изображение круглым */
+    margin-right: 20px;
+}
+
+.info3 {
+    display: flex;
+    flex-direction: column;
+}
+/* текст */
+h3 {
+    margin: 0 0 5px 0;
+}
+
+p3 {
+    margin: 0;
+}
+p {
+    color: #eaeaea;
+}
+.text-color {
+  color: #black;
+}
+/* подвал */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  background-color: #183e4b;
+  padding: 20px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #8ba0a4;
+  margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+  color: #d74a49;
+}
+
+.footer-copyright {
+  grid-column: span 4;
+  text-align: right;
+    color:#8ba0a4;
+}
+/* Белый блок с маленькими картинками-ссылками */
+.white-block {
+    background-color: #eaeaea;
+    padding: 20px;
+    text-align: center;
+}
+
+.white-block a {
+    display: inline-block;
+    margin: 10px;
+}
+
+.white-block img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Красный блок с информацией */
+.red-info-block {
+    background-color: #8ba0a4;
+    color: #183e4b;
+    padding: 20px;
+    text-align: center;
+}
+
+.red-info-block h2 {
+    margin-top: 30px;
+}
+
+.red-info-block p {
+    margin-bottom: 30px;
+}
+
+.image-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #eaeaea; /* Белый фон для контейнера */
+    border-radius: 5px;
+}
+
+.image-link {
+    margin: 10px;
+    transition: transform 0.3s ease; /* Плавный переход при наведении */
+}
+
+.image-link:hover {
+    transform: scale(1.1); /* Увеличение масштаба при наведении */
+}
+
+.image-link img {
+    display: block; /* Убираем отступы между изображениями */
+    max-width: 100%; /* Изображения не будут выходить за пределы контейнера */
+    height: auto; /* Автоматическое сохранение пропорций изображений */
+}
+
+
+.country-descriptions {
+    display: flex;
+    justify-content: space-around;
+    background-color: #8ba0a4; /* Красный фон */
+    padding: 20px;
+    width: 100%; /* Блок займет всю ширину */
+    box-sizing: border-box; /* Чтобы отступы не влияли на ширину */
+}
+
+.country-card {
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+}
+
+p {
+    color: #183e4b; /* Белый цвет текста */
+    line-height: 1.5;
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.text-block {
+    background-color: #183e4b;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #eaeaea;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.image-top,
+.image-bottom {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.image-item {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.text-block {
+  padding: 20px;
+  background-color: #183e4b;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.image-left,
+.image-right {
+  margin: 0 10px;
+}
+
+.dish-card {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Тень */
+    border-radius: 8px; /* Закругленные углы */
+	
+}
+
+.dish-card img {
+	width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обрезка изображения для сохранения пропорций */
+	 display: block;
+  transition: filter 0.3s ease;
+}
+.dish-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dish-card:hover img {
+  filter: brightness(70%);
+}
+
+.dish-card:hover .dish-info {
+  opacity: 1;
+}
+
+.container4 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tour-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tour-block {
+  background-color: #183e4b;
+  padding: 10px;
+  margin-right: 5px;
+  box-sizing: border-box;
+  width: 24%;
+}
+
+.tour-block img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tour-block h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.other-tours {
+  width: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.other-tours h2 {
+  margin-top: 0;
+}
+
+.other-tours ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.other-tours li {
+  margin-bottom: 5px;
+}
+
+.container5 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-block {
+    border-radius: 5px;
+    padding: 20px;
+    width: 48%;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+}
+
+input[type="text"]:read-only {
+    background-color: #eaeaea;
+}
+
+.country-descriptions2 {
+    background-color: #d74a49; /* Красный фон */
+    padding: 20px;
+    width: 100%; /* Блок займет всю ширину */
+
+.section11 {
+    background-color: #8ba0a4;
+    padding: 20px;
+    margin: 10px;
+
+.main-block {
+            margin: 20px;
+            padding: 20px;
+            width: 60%;
+            text-align: center;
+            background-color: #eaeaea;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+        }
+
+   .container1 {
+            display: flex;
+            border: 1px solid #ccc;
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .image {
+            flex: 0 0 150px; /* Ширина изображения */
+            height: 150px; /* Высота изображения */
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%; /* Ширина изображения 100% от родительского блока */
+            height: auto;
+            display: block; /* Убираем пробелы под изображением */
+        }
+
+        .content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Центрируем контент по вертикали */
+            flex-grow: 1; /* Заполняем оставшееся пространство */
+        }

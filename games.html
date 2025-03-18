@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>PlayWithEasy</title>
+   <link rel="stylesheet" href="home.css">
+      <link rel="stylesheet" href="hash.css">
+	  <style>
+        #authButton {
+            background-color: #d74a49; /* Основной цвет кнопки */
+            color: #eaeaea; /* Цвет текста */
+            border: none; /* Убираем рамку */
+            border-radius: 5px; /* Скругленные углы */
+            padding: 10px 20px; /* Отступы внутри кнопки */
+            font-size: 20px; /* Размер шрифта */
+            cursor: pointer; /* Указатель курсора */
+        }
+
+    </style>
+</head>
+<body>
+
+   <div class="banner">
+		<img id="logo" src="images\logo.png" width="70" height="70">
+        <div class="banner-text">
+            <h1 style="color: #d74a49">PlayWithEasy</h1>
+            <p class="subtitle">Говорим на языке казуальных игр!</p>  
+        </div>
+    </div>
+   <div class = "text-color">
+        <div class="red-menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="games.html">Каталог игр</a></li>
+            <li><a href="about.html">О нас</a></li>
+          <li><a href="question.html">ЧаВо</a></li>
+		  		  <li><button id="authButton" onclick="checkAuth()"></button></li>
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+          </ul>
+    </div>
+<div class="filter">
+        <button onclick="filterGames('all')">Все</button>
+        <button onclick="filterGames('visualNovel')">Визуальная новелла</button>
+        <button onclick="filterGames('cooperative')">Кооперативные игры</button>
+        <button onclick="filterGames('horror')">Хоррор</button>
+        <button onclick="filterGames('quest')">Квест</button>
+    </div>
+
+    <div class="game-list" id="gameList">
+        <div class="game-item" data-category="visualNovel">
+            <img src="images/2.png" alt="Game 1">
+            <p><a href="guide.html?game=Milk%20Outside">Milk Outside a Bag of Milk Outside a Bag of Milk</a></p>
+        </div>
+        <div class="game-item" data-category="cooperative">
+            <img src="images/8.png" alt="Game 1">
+            <p><a href="guide.html?game=Sven%20Coop">Sven Co-op</a></p>
+        </div>
+        <div class="game-item" data-category="horror">
+            <img src="images/9.png" alt="Game 1">
+            <p><a href="guide.html?game=Five%20Nights">Five Nights at Freddy's: Help Wanted</a></p>
+        </div>
+        <div class="game-item" data-category="quest">
+            <img src="images/4.png" alt="Game 1">
+            <p><a href="guide.html?game=Henry%20Stickmin">The Henry Stickmin</a></p>
+        </div>
+        <div class="game-item" data-category="quest">
+            <img src="images/3.png" alt="Game 1">
+            <p> <a href="guide.html?game=Neighbours%20Hell">Neighbours back From Hell</a></p>
+        </div>
+    </div>
+
+    <script src="hast.js"></script>
+
+
+	<h2><a href="writer.html">Редактор статей</a></h2>
+    </div>
+
+
+
+      <footer>
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">PlayWithEasy</h3>
+  <p style="color: #8ba0a4">Добро пожаловать на наш сайт, посвященный казуальным играм! На нашем портале вы сможете ознакомиться с подробными гайдами и стратегиями, которые помогут вам преодолеть сложные уровни и добиться успеха.</p>
+  </div>
+
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">Связь</h3>
+    <a href="china">Главная</a>
+    <a href="japan">Профиль</a>
+    <a href="korea">Свяжитесь с нами</a>
+  </div>
+
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">Социальные медиа</h3>
+    <a href="#">Яндекс.Дзен</a>
+    <a href="#" >Одноклассники</a>
+      <a href="#">Твиттер</a>
+      <a href="#">ВКонтакте</a>
+  </div>
+
+  <div class="footer-copyright">
+    Copyright © 2024 PlayWithEasy
+  </div>
+</footer>
+	</div>
+</div>
+</div>
+</body>
+</html>

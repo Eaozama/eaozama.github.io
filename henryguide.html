@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Гайд по игре</title>
+    <link rel="stylesheet" href="home.css">
+	    <link rel="stylesheet" href="menu.css">
+    <script src="games.js" defer></script>
+    <script src="guide.js" defer></script>
+	
+	<style>
+        .container3 {
+            display: flex; /* Используем flexbox для расположения элементов в одну линию */
+            align-items: center; /* Выравнивание по вертикали */
+        }
+		 #authButton {
+            background-color: #d74a49; /* Основной цвет кнопки */
+            color: #eaeaea; /* Цвет текста */
+            border: none; /* Убираем рамку */
+            border-radius: 5px; /* Скругленные углы */
+            padding: 10px 20px; /* Отступы внутри кнопки */
+            font-size: 20px; /* Размер шрифта */
+            cursor: pointer; /* Указатель курсора */
+        }
+    </style>
+</head>
+<body>
+<div class="banner">
+		<img id="logo" src="images\logo.png" width="70" height="70">
+        <div class="banner-text">
+            <h1 style="color: #d74a49">PlayWithEasy</h1>
+            <p class="subtitle">Говорим на языке казуальных игр!</p>  
+        </div>
+    </div>
+   <div class = "text-color">
+        <div class="red-menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="games.html">Каталог игр</a></li>
+            <li><a href="about.html">О нас</a></li>
+          <li><a href="question.html">ЧаВо</a></li>
+		  		  <li><button id="authButton" onclick="checkAuth()"></button></li>
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+          </ul>
+    </div>
+	
+		<div class="sidebar">
+            <h2>Содержание</h2>
+            <ul id="menu">
+                <li><a href="#section1">Breaking the Bank | BtB</a></li>
+                <li><a href="#section2">Escaping the Prison | EtP</a></li>
+                <li><a href="#section3">Stearling the Diamond | StD</a></li>
+                <li><a href="#section4">Infiltrating the Airship | ItA</a></li>
+            </ul>
+        </div>
+
+	<div class="container">
+	<div class="content">
+  <center><h1>Гайд для получения 100% достижений</h1></center>
+<center>
+       <div class="country-descriptions">
+        <div class="main-block">
+<h3>Автор гайда: Dek в Steam</h3>
+<h2 id="section1">Breaking the Bank | BtB</h2>
+            <div class="container3">
+    <img src="images\1.jpg" width="100" height="100">
+    <p><b>Pentafail</b> - Получить все фейлы в BtB.</p>
+</div>
+ <div class="container3">
+    <img src="images\2.jpg" width="100" height="100">
+    <p><b>Bank Account</b> - Найти все биосы в BtB. Всего биосов: 5.</p>
+</div>
+ <div class="container3">
+    <img src="images\3.jpg" width="100" height="100">
+    <p><b>*chirp chirp*</b> - Не может же это продолжаться весь день. Используем лопату (Shovel) и после взрыва нажимаем на синюю машину с помощью ЛКМ.</p>
+</div>
+ <div class="container3">
+<img src="images\4.jpg" width="100" height="100">
+    <p><b>The Story Begins</b> - Пройти BtB. Используйте мешок (Disguise)</p>
+</div>
+<hr>
+<h2 id="section2">Escaping the Prison | EtP</h2>
+			   <div class="container3">
+<img src="images\5.jpg" width="100" height="100">
+    <p><b>Rank:BBO</b> - Получить ранг: BBO. Используем дрель (Drill), потом нажимаем на лом (Crowbar), бежим вниз, делаем сальтуху и кликаем в нужный момент.</p>
+</div>
+ <div class="container3">
+<img src="images\6.jpg" width="100" height="100">
+    <p><b>Rank:LU</b> - Получить ранг: LU. Используем телефон (Cellphone) и в суде в виде доказательств используем маскировачную сумку (Disguising bag).</p>
+</div>
+ <div class="container3">
+<img src="images\7.jpg" width="100" height="100">
+    <p><b>Rank:SE</b> - Получить ранг: SE. С помощью напильника (File) распиливыем дверь (Cell door). Потом ударяем двух охранников и поднимаемся в вентиляцию с помощью стула (Chair) и идём направо. Дальше спускаемся вниз с помощью двух вантузов (Plungers).</p>
+</div>
+ <div class="container3">
+<img src="images\8.jpg" width="100" height="100">
+    <p><b>It's a Joke...</b> - Я не тупица, ясно? Используем дрель (Drill), достаём Opacitator и нажимаем по словам с помощью ЛКМ.</p>
+</div>
+ <div class="container3">
+<img src="images\9.jpg" width="100" height="100">
+    <p><b>lolbrawlreference</b> - lmao. Используем дрель (Drill), потом нажимаем на лом (Crowbar), бежим вниз и ещё раз вниз.</p>
+</div>
+ <div class="container3">
+<img src="images\10.jpg" width="100" height="100">
+    <p><b>DONUT WANT!</b> - ... или ты хочешь? Нужно собрать 5 пончиков.</p>
+</div>
+ <div class="container3">
+<img src="images\11.jpg" width="964" height="482">
+    <p><b>1-3 пончика</b> - С помощью напильника (File) распиливыем дверь (Cell door). Потом ударяем двух охранников, поднимаемся в вентиляцию с помощью стула (Chair) и идём налево.</p>
+</div>
+ <div class="container3">
+<img src="images\12.jpg" width="964" height="482">
+    <p><b>4 пончик</b> - Используем дрель (Drill) и достаём Opacitator.</p>
+</div>
+ <div class="container3">
+<img src="images\13.jpg" width="964" height="482">
+    <p><b>5 пончик</b> - Пьём энергетический напиток (NrG drink).</p>
+</div>
+ <div class="container3">
+<img src="images\14.jpg" width="100" height="100">
+    <p><b>BRAAAGH!!</b> - ой. Делаем концовку ранга: SE, и когда пойдут титры нажмите на солнце.</p>
+</div>
+ <div class="container3">
+<img src="images\15.jpg" width="964" height="482">
+</div>
+ <div class="container3">
+<img src="images\16.jpg" width="100" height="100">
+    <p><b>Prisoneer</b> - Получить все 18 уникальных фейлов в EtP. Чтобы понять где вам остался фейл то нажмите на карту (Map).</p>
+</div>
+ <div class="container3">
+<img src="images\17.jpg" width="100" height="100">
+    <p><b>Prisoner Log</b> - Найти все биосы в EtP. Всего биосов 38.</p>
+</div>
+<hr>
+<h2 id="section3">Stearling the Diamond | StD</h2>
+			   <div class="container3">
+<img src="images\18.jpg" width="100" height="100">
+    <p><b>Rank:IoaS</b> - Получить ранг: IoaS.
+Врываемся (Busy In) на самокате и тараним (Ram), используем щит (Shield), алмаз цепляем используя трос (Tow Cable). Уезжая от мусоров кидаем в них камень (Rock) и помещаем себя в пузырь (Bubble). Позже падаем вместе с алмазом (Diamond).</p>
+</div>
+<div class="container3">
+<img src="images\19.jpg" width="100" height="100">
+    <p><b>Rank:UB</b> - Получить ранг: UB.
+Прокрадываемся (Sneak In) используя телепорт (Teleporter). Отвлекаем охранника с помощью пенни (Penny) и спускаемся крючком (Wire). Стекло ломаем ломотком (Hammer), используем доску (Plank) и вырубаем охранника алмазом (Diamond).</p>
+</div>
+<div class="container3">
+<img src="images\20.jpg" width="100" height="100">
+    <p><b>Rank:JPE</b> - Получить ранг: JPE. Прокрадываемся (Sneak In) ломая стену киркой (Pick). Дальше берём самолётик (Plane) и бежим налево. Съедаем гриб (Mushroom) и нажимаем на шестерёнку.
+</p>
+</div>
+<div class="container3">
+<img src="images\21.jpg" width="100" height="100">
+    <p><b>Failsterpiece</b> - Получить все 40 уникальных фейлов в StD. Чтобы понять где вам остался фейл то нажмите на карту (Map).</p>
+</div>
+<div class="container3">
+<img src="images\22.jpg" width="100" height="100">
+    <p><b>Like a D6</b> - Потерять 6 очков. Прокрадываемся (Sneak In) и 3 раза используем прыжковые ботинки (Jumble Hoppers).</p>
+</div>
+<div class="container3">
+<img src="images\23.jpg" width="100" height="100">
+    <p><b>100111010</b> - - 6d 69 73 73 69 6e 67 6e 6f 0d 0a
+Прокрадываемся (Sneak In) ломая стену киркой (Pick). Дальше берём самолётик (Plane), бежим налево, кидаем хороший мяч (Goodball) и нажимаем на "OK" в окнах.</p>
+</div>
+ <div class="container3">
+<img src="images\24.jpg" width="964" height="482">
+</div>
+<div class="container3">
+<img src="images\25.jpg" width="100" height="100">
+    <p><b>tl; dr</b> - У меня нет на это времени.
+Прокрадываемся (Sneak In) используя телепорт (Teleporter). Отвлекаем охранника с помощью пенни (Penny) и используем портальную пушку (Wormhole Rifle). Дальше кликаем на данный текст:</p>
+</div>
+ <div class="container3">
+<img src="images\26.jpg" width="964" height="482">
+</div>
+<div class="container3">
+<img src="images\27.jpg" width="100" height="100">
+    <p><b>Connoisseurs</b> -Я должен владеть этим искусством. Нужно собрать 30 картин.</p>
+</div>
+<div class="container3">
+<img src="images\28.jpg" width="100" height="100">
+    <p><b>BUNP </b> - Я же говорил тебе о лестнице.
+Прокрадываемся (Sneak In) используя телепорт (Teleporter). Отвлекаем охранника с помощью пенни (Penny) и спускаемся крючком (Wire). Стекло ломаем ломотком (Hammer), используем доску (Plank) и выбираем сломать шею (Snap Neck).</p>
+</div>
+<div class="container3">
+<img src="images\29.jpg" width="100" height="100">
+    <p><b>The Ledger</b> - Найти все биосы в StD. Всего биосов: 27.</p>
+</div>
+<hr>
+<h2 id="section4">Infiltrating the Airship | ItA</h2>
+<div class="container3">
+<img src="images\30.jpg" width="100" height="100">
+    <p><b>Rank:GSPI</b> - Получить ранг: GSPI. Выбираем наушник (Earpiece), используем вакуум (Vacuum). Пробираемся используя клей (Glue),Чарли должен дать нам робота-помощника (Robo Helper). Убиваем пацана костным расплавом (Bone Melt). В библиотеке парня нужно напугать (Spook). Чарли должен перенаправить энергию (Reroute the power). Берём силовой пистолет (Force Gun)</p>
+</div>
+<div class="container3">
+<img src="images\31.jpg" width="100" height="100">
+    <p><b>Rank:RPE</b> - Получит ранг:RPE. Выбираем пушечное ядро (Cannon Ball) и садимся за стул (Chair), позже катапультируемся (Eject) Чтобы догнать пацана берите фасоль (Beans). Добираемся с помощью Rocket Jump. Выигрываем правую руку: если вы выбрали кинжал (Dirk) - инструменты (Tools), если выбрали Йо-Йо (Yo-Yo) - товары (Goods). Чтобы перебраться на другую сторону берите дельтаплан (Glider) и скидывайте манекены (Dummies).</p>
+</div>
+<div class="container3">
+<img src="images\32.jpg" width="100" height="100">
+    <p><b>Rank:RBT</b> - Получит ранг: RBT. Выбираем крюк кошку (Grapple Gun) и ждём (Wait). Спускаемся в вентиляцию (Vent) и прыгаем (Leap). Используем Paperizor и крадём алмаз с помощью Shrink 'n Grow. Надеваем броню (Armor) и выбираем диск с надписью Prototype.</p>
+</div>
+<div class="container3">
+<img src="images\33.jpg" width="100" height="100">
+    <p><b>Rank:RBH</b> - Получить ранг: RBH. Выбираем пушечное ядро (Cannon Ball) и садимся за стул (Chair), позже катапультируемся (Eject). Чтобы догнать пацана берите фасоль (Beans). Добираемся с помощью Rocket Jump. Выигрываем правую руку: если вы выбрали кинжал (Dirk) - инструменты (Tools), если выбрали Йо-Йо (Yo-Yo) - товары (Goods). Чтобы перебраться на другую сторону берите дельтаплан (Glider) и танк (Tank).</p>
+</div>
+<div class="container3">
+<img src="images\34.jpg" width="100" height="100">
+    <p><b>Frequent Failer</b> - олучить все 60 уникальных фейлов в ItA. Чтобы понять где вам остался фейл то нажмите на карту (Map).</p>
+</div>
+<div class="container3">
+<img src="images\35.jpg" width="100" height="100">
+    <p><b>Membership</b> - Найти все биосы в ItA. Всего биосов 58.</p>
+</div>
+<div class="container3">
+<img src="images\36.jpg" width="100" height="100">
+    <p><b>Bound to the Earth</b> - О боже мой! Выбираем пушечное ядро (Cannon Ball) и садимся за стул (Chair), позже катапультируемся (Eject) Чтобы догнать пацана берите фасоль (Beans). Добираемся с помощью Rocket Jump. Выигрываем правую руку беря Йо-Йо (Yo-Yo) - товары (Goods).</p>
+</div>
+<div class="container3">
+<img src="images\37.jpg" width="100" height="100">
+    <p><b>Last Reverie</b> - Надо было держать тебя взаперти. Берём пушечное ядро (Cannon Ball) и садимся за стул (Chair) и катапультируемся (Eject) Чтобы догнать парня берём фасоль (Beans). Добираемся с помощью Rocket Jump. Побеждаем правую руку беря кинжал (Dirk) - инструменты (Tools).</p>
+</div>
+<div class="container3">
+<img src="images\38.jpg" width="100" height="100">
+    <p><b>You Win!</b> - Молодец! Выберите липкую руку (Sticky Hand), затем Ball ‘n Chain.</p>
+</div>
+<div class="container3">
+<img src="images\39.jpg" width="100" height="100">
+    <p><b>Barnyard Blitz</b> - Здесь, конечно, все по-звериному. Выбираем наушник (Earpiece), используем вакуум (Vacuum). Пробираемся используя клей (Glue),Чарли должен дать нам робота-помощника (Robo Helper). Убиваем пацана костным расплавом (Bone Melt). В библиотеке парня нужно напугать (Spook). Выбираем [Сделать шум животных] ([Make an animal noise])</p>
+</div>
+<div class="container3">
+<img src="images\40.jpg" width="100" height="100">
+    <p><b>Famous Movie Line</b> - Ладно, он не так уж и знаменит. Выбираем наушник (Earpiece), используем вакуум (Vacuum). Пробираемся используя клей (Glue),Чарли должен дать нам робота-помощника (Robo Helper). Убиваем пацана костным расплавом (Bone Melt). В библиотеке выбираем сюрикен (Ninja Star). Теперь нажимаем на буквы (на титрах) и собираем слово MULAN</p>
+</div>
+ <div class="container3">
+<img src="images\41.jpg" width="964" height="482">
+</div>
+<div class="container3">
+<img src="images\42.jpg" width="100" height="100">
+    <p><b>Gold</b> - Это съедобно? Выбираем наушник (Earpiece), используем вакуум (Vacuum). Пробираемся используя клей (Glue),Чарли должен дать нам робота-помощника (Robo Helper). Убиваем пацана костным расплавом (Bone Melt). В библиотеке парня нужно напугать (Spook). Чарли должен перенаправить энергию (Reroute the power). Используем банановую бомбу (Banana Bomb) и нажимаем на "oooooohhhh Banana"</p>
+</div>
+<div class="container3">
+<img src="images\43.jpg" width="100" height="100">
+    <p><b>Buttery Snack</b> - ням ням. Выбираем пушечное ядро (Cannon Ball) и садимся за стул (Chair), позже катапультируемся (Eject) Чтобы догнать пацана берите фасоль (Beans). Добираемся с помощью Rocket Jump. Выигрываем правую руку: если вы выбрали кинжал (Dirk) - инструменты (Tools), если выбрали Йо-Йо (Yo-Yo) - товары (Goods). Чтобы перебраться на другую сторону берите дельтаплан (Glider) и выбираем парашют (Parachute). Нажимаем на "Butterfingers"</p>
+</div>
+<div class="container3">
+<img src="images\44.jpg" width="100" height="100">
+    <p><b>Biggol Sword</b> - Легенда гласит, что он есть у лучших членов клана Toppats. Выбираем крюк кошку (Grapple Gun) и ждём (Wait), возьмите золотой ключ на книге:</p>
+</div>
+ <div class="container3">
+<img src="images\45.jpg" width="964" height="482">
+<p>Теперь спускаемся в вентиляцию (Vent) и прыгаем (Leap). Освободив заключённого используйте Paperizor и попав в комнату с рубином возьмите флешку.</p>
+</div>
+ <div class="container3">
+<img src="images\46.jpg" width="964" height="482">
+<p>Крадём алмаз с помощью Shrink 'n Grow. Надеваем броню (Armor) и выбираем флешку в котором будет код.</p>
+</div>
+ <div class="container3">
+<img src="images\47.jpg" width="964" height="482">
+</div>
+ <div class="container3">
+<img src="images\48.jpg" width="964" height="482">
+<p>Теперь используем наушник (Earpiece) и вакуум (Vacuum). Потом нажимаем на этот терминал и вводим код.</p>
+</div>
+ <div class="container3">
+<img src="images\49.jpg" width="964" height="482">
+<p>И наконец выбираем пушечное ядро (Cannon Ball) и садимся за стул (Chair), позже катапультируемся (Eject) и достижение ваше.</p>
+</div>
+<div class="container3">
+<img src="images\50.jpg" width="100" height="100">
+    <p><b>LOLOLOL!!11</b> - ROFLMAO. Выбираем крюк кошку (Grapple Gun) и ждём (Wait). Спускаемся в вентиляцию (Vent) и прыгаем (Leap) и взлом (Hack). Теперь нажимаем на "Watt"</p>
+</div>
+ <div class="container3">
+<img src="images\51.jpg" width="964" height="482">
+</div>
+<div class="container3">
+<img src="images\52.jpg" width="100" height="100">
+    <p><b>BEEEEEEEE</b> - EEEEEEEEEHHHHHHH!! Делаем концовку ранга: RPE. Во время титров нужно нажать на ярлык игры "Team Fortress 2"</p>
+</div>
+ <div class="container3">
+<img src="images\53.jpg" width="964" height="482">
+</div>
+<div class="container3">
+<img src="images\54.jpg" width="100" height="100">
+    <p><b>braaagghh..</b> -  ...кашель...Делаем концовку ранга: RBH. Теперь нажимаем на солнце</p>
+</div>
+ <div class="container3">
+<img src="images\55.jpg" width="964" height="482">
+</div>
+</center>
+    </div>    </div>
+	 <script src="menu.js"></script>	
+
+ <footer>
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">PlayWithEasy</h3>
+  <p style="color: #8ba0a4">Добро пожаловать на наш сайт, посвященный казуальным играм! На нашем портале вы сможете ознакомиться с подробными гайдами и стратегиями, которые помогут вам преодолеть сложные уровни и добиться успеха.</p>
+  </div>
+
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">Связь</h3>
+    <a href="china">Главная</a>
+    <a href="japan">Профиль</a>
+    <a href="korea">Свяжитесь с нами</a>
+  </div>
+
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">Социальные медиа</h3>
+    <a href="#">Яндекс.Дзен</a>
+    <a href="#" >Одноклассники</a>
+      <a href="#">Твиттер</a>
+      <a href="#">ВКонтакте</a>
+  </div>
+
+  <div class="footer-copyright">
+    Copyright © 2024 PlayWithEasy
+  </div>
+</footer>
+	</div>
+</div>
+</div>
+</body>
+</html>
