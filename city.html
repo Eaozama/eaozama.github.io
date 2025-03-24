@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник предприятий</title>
+	 <link rel="stylesheet" href="home.css">
+      <link rel="stylesheet" href="topStyle.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        input {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 300px;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        .company {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+		#search {
+            margin-bottom: 20px;
+            padding: 5px;
+            width: calc(100% - 12px);
+        }
+    </style>
+</head>
+<body>
+<div class="banner">
+		<img id="logo" src="images\logo.png" width="70" height="70">
+        <div class="banner-text">
+            <h1 style="color: #d74a49">PlayWithEasy</h1>
+            <p class="subtitle">Говорим на языке казуальных игр!</p>  
+        </div>
+    </div>
+   <div class = "text-color">
+        <div class="red-menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="games.html">Каталог игр</a></li>
+            <li><a href="about.html">О нас</a></li>
+          <li><a href="question.html">ЧаВо</a></li>
+		  <li><a href="univer.html">Обучение</a></li>
+		  <li><a href="city.html">Работа</a></li>
+
+</div>
+    <h1>Справочник предприятий по разработке игр</h1>
+<p>У вас есть неиссякаемы поток идей и желание воплощать их в жизнь? Похоже, вы по адресу! Выбери свою компанию и начни разработку прямо сейчас!</p>
+    <input type="text" id="search" placeholder="Поиск по названию..." oninput="searchCompany()">
+    <div id="result"></div>
+	
+
+
+    <script>
+        // Массив компаний
+        const companies = [
+            { name: "Studio X", address: "ул. Игр, д. 1", profile: "Разработка игр для мобильных устройств" },
+            { name: "Game Dev Inc", address: "ул. Разработчиков, д. 5", profile: "Создание необычных игровых концепций" },
+            { name: "Playground", address: "пр. Игровой, д. 10", profile: "Разработка образовательных игр" },
+            { name: "Creative Games", address: "ул. Креативная, д. 3", profile: "Разработка инди-игр" },
+            { name: "Epic Games Studio", address: "ул. Эпиков, д. 7", profile: "Разработка AAA-игр" },
+            // Можно добавить больше компаний
+        ];
+
+        // Функция для поиска компании
+        function searchCompany() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '';
+
+            const filteredCompanies = companies.filter(company => company.name.toLowerCase().includes(input));
+
+            if (filteredCompanies.length === 0) {
+                resultDiv.innerHTML = '<p>Компании не найдены.</p>';
+                return;
+            }
+
+            filteredCompanies.forEach(company => {
+                const companyDiv = document.createElement('div');
+                companyDiv.className = 'company';
+                companyDiv.innerHTML = `<strong>${company.name}</strong><br>Адрес: ${company.address}<br>Профиль: ${company.profile}`;
+                resultDiv.appendChild(companyDiv);
+            });
+        }
+    </script>
+	 <footer>
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">PlayWithEasy</h3>
+  <p style="color: #8ba0a4">Добро пожаловать на наш сайт, посвященный казуальным играм! На нашем портале вы сможете ознакомиться с подробными гайдами и стратегиями, которые помогут вам преодолеть сложные уровни и добиться успеха.</p>
+  </div>
+
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">Связь</h3>
+    <a href="china">Главная</a>
+    <a href="japan">Профиль</a>
+    <a href="korea">Свяжитесь с нами</a>
+  </div>
+
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">Социальные медиа</h3>
+    <a href="#">Яндекс.Дзен</a>
+    <a href="#" >Одноклассники</a>
+      <a href="#">Твиттер</a>
+      <a href="#">ВКонтакте</a>
+  </div>
+
+  <div class="footer-copyright">
+    Copyright © 2024 PlayWithEasy
+  </div>
+</footer>
+</body>
+</html>
+
