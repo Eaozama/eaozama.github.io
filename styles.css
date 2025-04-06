@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.editor-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar {
+	
+    margin-bottom: 10px;
+}
+
+.articles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article {
+    border: 2px solid #ccc; /* Статичная рамка */
+    padding: 5px; /* Отступ внутри статьи */
+    width: 500px; /* Ширина статьи */
+    height: 500px; /* Высота статьи */
+    overflow-y: auto; /* Вертикальная прокрутка при переполнении */
+    box-sizing: border-box; /* Учитывает паддинг в общих размерах */
+    min-height: 100px; /* Минимальная высота для статей */
+    background-color: #fff; /* Цвет фона статьи */
+}
+
+/* Добавление стиля для псевдоэлемента для плейсхолдера */
+.article:empty:before {
+    content: attr(placeholder);
+    color: black; /* Цвет плейсхолдера */
+    pointer-events: none; /* Иначе клик по плейсхолдеру будет переводить в режим редактирования */
+}
+
+#imageContainer {
+    margin-top: 20px;
+}
+
+#imageContainer img {
+    max-width: 100px; /* Максимальная ширина изображения */
+    max-height: 100px; /* Максимальная высота изображения */
+    margin-right: 5px; /* Отступ между изображениями */
+}
+
+/* Стили для кнопки помощи */
+.help-button {
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Отступы */
+    margin-top: 20px; /* Отступ сверху */
+    text-align: center; /* Выравнивание текста по центру */
+    border: none; /* Убираем обводку */
+    border-radius: 5px; /* Закругление углов */
+    cursor: pointer; /* Курсор в виде указателя при наведении */
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Окно фиксировано на экране */
+    z-index: 1000; /* Уровень наложения */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ширина на весь экран */
+    height: 100%; /* Высота на весь экран */
+    overflow: auto; /* Прокрутка при необходимости */
+    background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон */
+}
+
+.modal-content {
+    background-color: white; /* Фон модального окна */
+    margin: 15% auto; /* Центрирование окна */
+    padding: 20px; /* Отступы */
+    border: 1px solid #888; /* Обводка */
+    width: 80%; /* Ширина модального окна */
+}
+
+.close {
+    color: #aaa; /* Цвет крестика */
+    float: right; /* Выравнивание по правому краю */
+    font-size: 28px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Изменение цвета при наведении или фокусе */
+    text-decoration: none; /* Убираем подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+}

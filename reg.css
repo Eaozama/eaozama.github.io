@@ -1,0 +1,55 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.container6 {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #eaeaea;
+    border-radius: 5px;
+	justify-content: flex-start;
+	margin: 0; /* Установите 0 отступов */
+    width: 300px; /* Укажите ширину контейнера */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+	display: inline-block;
+    padding: 20px;
+    background: #d74a49;
+    color: #fff;
+	padding: 10px 70px;
+    border: none;
+    cursor: pointer;
+	display: inline-block;
+    padding: 10px 70px;
+    text-decoration: none;
+    background-color: #d74a49;
+    color: #eaeaea; /* Белый цвет текста */
+    font-size: 20px
+}
+
+button:hover {
+    background: #d74a49;
+}

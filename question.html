@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>PlayWithEasy</title>
+   <link rel="stylesheet" href="home.css">
+      <link rel="stylesheet" href="topStyle.css">
+	      <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #menu {
+            float: left;
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        #main {
+            margin-left: 220px;
+            padding: 10px;
+			
+
+        }
+        frame {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+   <div class="banner">
+		<img id="logo" src="images\logo.png" width="70" height="70">
+        <div class="banner-text">
+            <h1 style="color: #d74a49">PlayWithEasy</h1>
+            <p class="subtitle">Говорим на языке казуальных игр!</p>  
+        </div>
+    </div>
+   <div class = "text-color">
+        <div class="red-menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="games.html">Каталог игр</a></li>
+            <li><a href="about.html">О нас</a></li>
+          <li><a href="question.html">ЧаВо</a></li>
+		  <li><a href="univer.html">Обучение</a></li>
+		  <li><a href="city.html">Работа</a></li>
+ 
+          </ul>
+    </div>
+
+<div id="menu">
+        <h2> Меню </h2>
+        <ul>
+            <li><a href="javascript:void(0);" onclick="loadContent('cusgames.html')">Правила публикации</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('developers.html')">Про казуальные игры</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('companies.html')">Сообщество</a></li>
+        </ul>
+    </div>
+
+    <div id="main">
+        <h1>ЧаВо</h1>
+        <iframe id="content-frame" src="" width="100%" height="500px"></iframe>
+    </div>
+
+    <script>
+        function loadContent(page) {
+            document.getElementById('content-frame').src = page;
+        }
+    </script>
+
+
+
+
+        <footer>
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">PlayWithEasy</h3>
+  <p style="color: #8ba0a4">Добро пожаловать на наш сайт, посвященный казуальным играм! На нашем портале вы сможете ознакомиться с подробными гайдами и стратегиями, которые помогут вам преодолеть сложные уровни и добиться успеха.</p>
+  </div>
+
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">Связь</h3>
+    <a href="china">Главная</a>
+    <a href="japan">Профиль</a>
+    <a href="korea">Свяжитесь с нами</a>
+  </div>
+
+  <div class="footer-column">
+    <h3 style="color:#8ba0a4">Социальные медиа</h3>
+    <a href="#">Яндекс.Дзен</a>
+    <a href="#" >Одноклассники</a>
+      <a href="#">Твиттер</a>
+      <a href="#">ВКонтакте</a>
+  </div>
+
+  <div class="footer-copyright">
+    Copyright © 2024 PlayWithEasy
+  </div>
+</footer>
+	</div>
+</div>
+</div>
+</body>
+</html>
