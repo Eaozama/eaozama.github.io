@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="menu.css">
+	 <link rel="stylesheet" href="guides.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+		       <!-- Модальное окно для отображения изображения -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="guides.js"></script>
+	
+               <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+			<button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+        </nav>
+    </header>
+		<div class="sidebar">
+            <h2>Содержание</h2>
+            <ul id="menu">
+                <li><a href="#section1">Breaking the Bank | BtB</a></li>
+                <li><a href="#section2">Escaping the Prison | EtP</a></li>
+                <li><a href="#section3">Stearling the Diamond | StD</a></li>
+                <li><a href="#section4">Infiltrating the Airship | ItA</a></li>
+            </ul>
+        </div>
+
+	<div class="content">
+        <!-- Основной контент сайта -->
+  <center><h1>Гайд для получения 100% достижений</h1></center>
+<center>
+       <div class="country-descriptions">
+        <div class="main-block">
+<h3>Автор гайда: Dek в Steam</h3>
+<h2 id="section1">Breaking the Bank | BtB</h2>
+            <div class="container3">
+			<img src="images/1.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Pentafail</b> - Получить все фейлы в BtB.</p>
+</div>
+ <div class="container3">
+ <img src="images/2.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Bank Account</b> - Найти все биосы в BtB. Всего биосов: 5.</p>
+</div>
+ <div class="container3">
+ <img src="images/3.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>*chirp chirp*</b> - Не может же это продолжаться весь день. Используем лопату (Shovel) и после взрыва нажимаем на синюю машину с помощью ЛКМ.</p>
+</div>
+ <div class="container3">
+<img src="images/4.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>The Story Begins</b> - Пройти BtB. Используйте мешок (Disguise)</p>
+</div>
+<hr>
+<h2 id="section2">Escaping the Prison | EtP</h2>
+			   <div class="container3">
+<img src="images/5.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Rank:BBO</b> - Получить ранг: BBO. Используем дрель (Drill), потом нажимаем на лом (Crowbar), бежим вниз, делаем сальтуху и кликаем в нужный момент.</p>
+</div>
+ <div class="container3">
+<img src="images/6.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Rank:LU</b> - Получить ранг: LU. Используем телефон (Cellphone) и в суде в виде доказательств используем маскировачную сумку (Disguising bag).</p>
+</div>
+ <div class="container3">
+<img src="images/7.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Rank:SE</b> - Получить ранг: SE. С помощью напильника (File) распиливыем дверь (Cell door). Потом ударяем двух охранников и поднимаемся в вентиляцию с помощью стула (Chair) и идём направо. Дальше спускаемся вниз с помощью двух вантузов (Plungers).</p>
+</div>
+ <div class="container3">
+<img src="images/8.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>It's a Joke...</b> - Я не тупица, ясно? Используем дрель (Drill), достаём Opacitator и нажимаем по словам с помощью ЛКМ.</p>
+</div>
+ <div class="container3">
+<img src="images/9.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>lolbrawlreference</b> - lmao. Используем дрель (Drill), потом нажимаем на лом (Crowbar), бежим вниз и ещё раз вниз.</p>
+</div>
+ <div class="container3">
+<img src="images/10.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>DONUT WANT!</b> - ... или ты хочешь? Нужно собрать 5 пончиков.</p>
+</div>
+ <div class="container3">
+ <img src="images/11.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+    <p><b>1-3 пончика</b> - С помощью напильника (File) распиливыем дверь (Cell door). Потом ударяем двух охранников, поднимаемся в вентиляцию с помощью стула (Chair) и идём налево.</p>
+</div>
+ <div class="container3">
+  <img src="images/12.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+    <p><b>4 пончик</b> - Используем дрель (Drill) и достаём Opacitator.</p>
+</div>
+ <div class="container3">
+ <img src="images/13.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+    <p><b>5 пончик</b> - Пьём энергетический напиток (NrG drink).</p>
+</div>
+ <div class="container3">
+ <img src="images/14.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>BRAAAGH!!</b> - ой. Делаем концовку ранга: SE, и когда пойдут титры нажмите на солнце.</p>
+</div>
+ <div class="container3">
+  <img src="images/15.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+</div>
+ <div class="container3">
+ <img src="images/16.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Prisoneer</b> - Получить все 18 уникальных фейлов в EtP. Чтобы понять где вам остался фейл то нажмите на карту (Map).</p>
+</div>
+ <div class="container3">
+ <img src="images/17.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Prisoner Log</b> - Найти все биосы в EtP. Всего биосов 38.</p>
+</div>
+<hr>
+<h2 id="section3">Stearling the Diamond | StD</h2>
+			   <div class="container3">
+<img src="images/18.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Rank:IoaS</b> - Получить ранг: IoaS.
+Врываемся (Busy In) на самокате и тараним (Ram), используем щит (Shield), алмаз цепляем используя трос (Tow Cable). Уезжая от мусоров кидаем в них камень (Rock) и помещаем себя в пузырь (Bubble). Позже падаем вместе с алмазом (Diamond).</p>
+</div>
+<div class="container3">
+<img src="images/19.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Rank:UB</b> - Получить ранг: UB.
+Прокрадываемся (Sneak In) используя телепорт (Teleporter). Отвлекаем охранника с помощью пенни (Penny) и спускаемся крючком (Wire). Стекло ломаем ломотком (Hammer), используем доску (Plank) и вырубаем охранника алмазом (Diamond).</p>
+</div>
+<div class="container3">
+<img src="images/20.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Rank:JPE</b> - Получить ранг: JPE. Прокрадываемся (Sneak In) ломая стену киркой (Pick). Дальше берём самолётик (Plane) и бежим налево. Съедаем гриб (Mushroom) и нажимаем на шестерёнку.
+</p>
+</div>
+<div class="container3">
+<img src="images/21.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Failsterpiece</b> - Получить все 40 уникальных фейлов в StD. Чтобы понять где вам остался фейл то нажмите на карту (Map).</p>
+</div>
+<div class="container3">
+<img src="images/22.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Like a D6</b> - Потерять 6 очков. Прокрадываемся (Sneak In) и 3 раза используем прыжковые ботинки (Jumble Hoppers).</p>
+</div>
+<div class="container3">
+<img src="images/23.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>100111010</b> - - 6d 69 73 73 69 6e 67 6e 6f 0d 0a
+Прокрадываемся (Sneak In) ломая стену киркой (Pick). Дальше берём самолётик (Plane), бежим налево, кидаем хороший мяч (Goodball) и нажимаем на "OK" в окнах.</p>
+</div>
+ <div class="container3">
+  <img src="images/24.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+</div>
+<div class="container3">
+<img src="images/25.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>tl; dr</b> - У меня нет на это времени.
+Прокрадываемся (Sneak In) используя телепорт (Teleporter). Отвлекаем охранника с помощью пенни (Penny) и используем портальную пушку (Wormhole Rifle). Дальше кликаем на данный текст:</p>
+</div>
+ <div class="container3">
+  <img src="images/26.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+</div>
+<div class="container3">
+<img src="images/27.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Connoisseurs</b> - Я должен владеть этим искусством. Нужно собрать 30 картин.</p>
+</div>
+<div class="container3">
+<img src="images/28.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>BUNP </b> - Я же говорил тебе о лестнице.
+Прокрадываемся (Sneak In) используя телепорт (Teleporter). Отвлекаем охранника с помощью пенни (Penny) и спускаемся крючком (Wire). Стекло ломаем ломотком (Hammer), используем доску (Plank) и выбираем сломать шею (Snap Neck).</p>
+</div>
+<div class="container3">
+<img src="images/29.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>The Ledger</b> - Найти все биосы в StD. Всего биосов: 27.</p>
+</div>
+<hr>
+<h2 id="section4">Infiltrating the Airship | ItA</h2>
+<div class="container3">
+<img src="images/30.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Rank:GSPI</b> - Получить ранг: GSPI. Выбираем наушник (Earpiece), используем вакуум (Vacuum). Пробираемся используя клей (Glue),Чарли должен дать нам робота-помощника (Robo Helper). Убиваем пацана костным расплавом (Bone Melt). В библиотеке парня нужно напугать (Spook). Чарли должен перенаправить энергию (Reroute the power). Берём силовой пистолет (Force Gun)</p>
+</div>
+<div class="container3">
+<img src="images/31.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Rank:RPE</b> - Получит ранг:RPE. Выбираем пушечное ядро (Cannon Ball) и садимся за стул (Chair), позже катапультируемся (Eject) Чтобы догнать пацана берите фасоль (Beans). Добираемся с помощью Rocket Jump. Выигрываем правую руку: если вы выбрали кинжал (Dirk) - инструменты (Tools), если выбрали Йо-Йо (Yo-Yo) - товары (Goods). Чтобы перебраться на другую сторону берите дельтаплан (Glider) и скидывайте манекены (Dummies).</p>
+</div>
+<div class="container3">
+<img src="images/32.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Rank:RBT</b> - Получит ранг: RBT. Выбираем крюк кошку (Grapple Gun) и ждём (Wait). Спускаемся в вентиляцию (Vent) и прыгаем (Leap). Используем Paperizor и крадём алмаз с помощью Shrink 'n Grow. Надеваем броню (Armor) и выбираем диск с надписью Prototype.</p>
+</div>
+<div class="container3">
+<img src="images/33.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Rank:RBH</b> - Получить ранг: RBH. Выбираем пушечное ядро (Cannon Ball) и садимся за стул (Chair), позже катапультируемся (Eject). Чтобы догнать пацана берите фасоль (Beans). Добираемся с помощью Rocket Jump. Выигрываем правую руку: если вы выбрали кинжал (Dirk) - инструменты (Tools), если выбрали Йо-Йо (Yo-Yo) - товары (Goods). Чтобы перебраться на другую сторону берите дельтаплан (Glider) и танк (Tank).</p>
+</div>
+<div class="container3">
+<img src="images/34.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Frequent Failer</b> - олучить все 60 уникальных фейлов в ItA. Чтобы понять где вам остался фейл то нажмите на карту (Map).</p>
+</div>
+<div class="container3">
+<img src="images/35.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Membership</b> - Найти все биосы в ItA. Всего биосов 58.</p>
+</div>
+<div class="container3">
+<img src="images/36.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Bound to the Earth</b> - О боже мой! Выбираем пушечное ядро (Cannon Ball) и садимся за стул (Chair), позже катапультируемся (Eject) Чтобы догнать пацана берите фасоль (Beans). Добираемся с помощью Rocket Jump. Выигрываем правую руку беря Йо-Йо (Yo-Yo) - товары (Goods).</p>
+</div>
+<div class="container3">
+<img src="images/37.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Last Reverie</b> - Надо было держать тебя взаперти. Берём пушечное ядро (Cannon Ball) и садимся за стул (Chair) и катапультируемся (Eject) Чтобы догнать парня берём фасоль (Beans). Добираемся с помощью Rocket Jump. Побеждаем правую руку беря кинжал (Dirk) - инструменты (Tools).</p>
+</div>
+<div class="container3">
+<img src="images/38.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>You Win!</b> - Молодец! Выберите липкую руку (Sticky Hand), затем Ball ‘n Chain.</p>
+</div>
+<div class="container3">
+<img src="images/39.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Barnyard Blitz</b> - Здесь, конечно, все по-звериному. Выбираем наушник (Earpiece), используем вакуум (Vacuum). Пробираемся используя клей (Glue),Чарли должен дать нам робота-помощника (Robo Helper). Убиваем пацана костным расплавом (Bone Melt). В библиотеке парня нужно напугать (Spook). Выбираем [Сделать шум животных] ([Make an animal noise])</p>
+</div>
+<div class="container3">
+<img src="images/40.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Famous Movie Line</b> - Ладно, он не так уж и знаменит. Выбираем наушник (Earpiece), используем вакуум (Vacuum). Пробираемся используя клей (Glue),Чарли должен дать нам робота-помощника (Robo Helper). Убиваем пацана костным расплавом (Bone Melt). В библиотеке выбираем сюрикен (Ninja Star). Теперь нажимаем на буквы (на титрах) и собираем слово MULAN</p>
+</div>
+ <div class="container3">
+  <img src="images/41.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+</div>
+<div class="container3">
+<img src="images/42.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Gold</b> - Это съедобно? Выбираем наушник (Earpiece), используем вакуум (Vacuum). Пробираемся используя клей (Glue),Чарли должен дать нам робота-помощника (Robo Helper). Убиваем пацана костным расплавом (Bone Melt). В библиотеке парня нужно напугать (Spook). Чарли должен перенаправить энергию (Reroute the power). Используем банановую бомбу (Banana Bomb) и нажимаем на "oooooohhhh Banana"</p>
+</div>
+<div class="container3">
+<img src="images/43.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Buttery Snack</b> - ням ням. Выбираем пушечное ядро (Cannon Ball) и садимся за стул (Chair), позже катапультируемся (Eject) Чтобы догнать пацана берите фасоль (Beans). Добираемся с помощью Rocket Jump. Выигрываем правую руку: если вы выбрали кинжал (Dirk) - инструменты (Tools), если выбрали Йо-Йо (Yo-Yo) - товары (Goods). Чтобы перебраться на другую сторону берите дельтаплан (Glider) и выбираем парашют (Parachute). Нажимаем на "Butterfingers"</p>
+</div>
+<div class="container3">
+<img src="images/44.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Biggol Sword</b> - Легенда гласит, что он есть у лучших членов клана Toppats. Выбираем крюк кошку (Grapple Gun) и ждём (Wait), возьмите золотой ключ на книге:</p>
+</div>
+ <div class="container3">
+  <img src="images/45.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+<p>Теперь спускаемся в вентиляцию (Vent) и прыгаем (Leap). Освободив заключённого используйте Paperizor и попав в комнату с рубином возьмите флешку.</p>
+</div>
+ <div class="container3">
+  <img src="images/46.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+<p>Крадём алмаз с помощью Shrink 'n Grow. Надеваем броню (Armor) и выбираем флешку в котором будет код.</p>
+</div>
+ <div class="container3">
+  <img src="images/47.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+</div>
+ <div class="container3">
+  <img src="images/48.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+<p>Теперь используем наушник (Earpiece) и вакуум (Vacuum). Потом нажимаем на этот терминал и вводим код.</p>
+</div>
+ <div class="container3">
+  <img src="images/49.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+<p>И наконец выбираем пушечное ядро (Cannon Ball) и садимся за стул (Chair), позже катапультируемся (Eject) и достижение ваше.</p>
+</div>
+<div class="container3">
+<img src="images/50.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>LOLOLOL!!11</b> - ROFLMAO. Выбираем крюк кошку (Grapple Gun) и ждём (Wait). Спускаемся в вентиляцию (Vent) и прыгаем (Leap) и взлом (Hack). Теперь нажимаем на "Watt"</p>
+</div>
+ <div class="container3">
+  <img src="images/51.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+</div>
+<div class="container3">
+<img src="images/52.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>BEEEEEEEE</b> - EEEEEEEEEHHHHHHH!! Делаем концовку ранга: RPE. Во время титров нужно нажать на ярлык игры "Team Fortress 2"</p>
+</div>
+ <div class="container3">
+  <img src="images/53.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+</div>
+<div class="container3">
+<img src="images/54.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>braaagghh..</b> -  ...кашель...Делаем концовку ранга: RBH. Теперь нажимаем на солнце</p>
+</div>
+ <div class="container3">
+  <img src="images/55.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 282px; min-width: 664px; min-height: 282px;">
+</div>
+ </div>
+    </div>
+</center>
+         </div>
+
+   <footer>
+<div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">© 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+h1 {
+    text-align: center;
+}
+.container4 {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+input[type="email"], input[type="text"], textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+textarea {
+    height: 150px;
+}
+button {
+    background-color: #183e4b;
+    color: #eaeaea;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+button:hover {
+    background-color: #d74a49;
+}
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+.containerfaq {
+    width: 100%; /* Занимает всю ширину экрана */
+    max-width: 800px; /* Ограничение максимальной ширины для больших экранов */
+    margin: 0 auto; /* Центрирование блока */
+    background: #fff;
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень блока */
+    box-sizing: border-box; /* Учет отступов в ширине блока */
+    min-height: 100%; /* Минимальная высота блока */
+}
+
+
+.button-container2 {
+    display: flex;
+    gap: 20px; /* Отступы между кнопками */
+}
+
+.button {
+    text-decoration: none;
+    color: black; /* Цвет текста */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border: 2px solid transparent; /* Базовая рамка */
+    position: relative; /* Для псевдоэлемента */
+    transition: color 0.3s, border-color 0.3s; /* Плавный переход */
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Затемнение при наведении */
+}
+
+/* Подчёркивание для активной ссылки */
+.button:active,
+.button.active {
+
+}
+
+/* Логика активной страницы */
+.button.active {
+    border-bottom: 2px solid red; /* Подчёркивание красным цветом */
+}

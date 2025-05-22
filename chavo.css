@@ -1,0 +1,85 @@
+.containerfaq {
+    width: 100%; /* Занимает всю ширину экрана */
+    max-width: 800px; /* Ограничение максимальной ширины для больших экранов */
+    margin: 0 auto; /* Центрирование блока */
+    background: #fff;
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень блока */
+    box-sizing: border-box; /* Учет отступов в ширине блока */
+    min-height: 100%; /* Минимальная высота блока */
+}
+
+
+
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #183e4b;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d74a49;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+.faq-item h3 {
+    margin: 0;
+}
+.button-container2 {
+    display: flex;
+    gap: 20px; /* Отступы между кнопками */
+}
+
+.button {
+    text-decoration: none;
+	
+    color: black; /* Цвет текста */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border: 2px solid transparent; /* Базовая рамка */
+    position: relative; /* Для псевдоэлемента */
+    transition: color 0.3s, border-color 0.3s; /* Плавный переход */
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Затемнение при наведении */
+}
+
+/* Подчёркивание для активной ссылки */
+.button:active,
+.button.active {
+
+}
+
+/* Логика активной страницы */
+.button.active {
+    border-bottom: 2px solid red; /* Подчёркивание красным цветом */
+}

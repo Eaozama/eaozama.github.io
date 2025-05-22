@@ -1,0 +1,38 @@
+.filter {
+    margin: 20px 0;
+}
+
+.filter button {
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #183e4b;
+    color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter button:hover {
+    background-color: #d74a49;
+}
+
+.game-list {
+    display: flex;            /* Установка flexbox для рядом расположенных элементов */
+    flex-wrap: wrap;        /* Позволяет элементам переноситься на новую строку при нехватке места */
+    justify-content: flex-start; /* Выравнивание элементов в начале */
+}
+
+
+.game-item {
+    margin: 10px;           /* Отступ между элементами */
+    border: 1px solid #ccc; /* Обводка */
+    border-radius: 5px;     /* Скругление углов */
+    padding: 10px;          /* Отступ внутри элемента */
+    width: 150px;           /* Ширина блока с игрой */
+    text-align: center;     /* Выравнивание текста по центру */
+}
+
+.game-item img {
+    max-width: 100%;        /* Ограничение ширины изображения */
+    height: auto;           /* Автоматическая высота относительно ширины */
+}
