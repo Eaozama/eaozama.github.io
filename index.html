@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Установка кодировки страницы и адаптивных размеров для мобильных устройств -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <!-- Подключение внешних файлов стилей для оформления страницы -->
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="home.css">
+	 <!-- Заголовок страницы -->
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+	<!-- Меню -->
+        <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+			<button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+			 <!-- Скрипт для обработки авторизации -->
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+        </nav>
+    </header>
+	  <!-- Основной фон сайта и градиенты сверху и снизу для дизайна -->
+<div class="background"></div>
+ <div class="gradient-top"></div>
+    <div class="gradient-bottom"></div>
+	  <!-- Контейнер с основным контентом сайта -->
+<div class="container">
+        <div class="content">
+		<div class="image-block">
+           <center><h1>Популярные игры</h1></center>
+		   <!-- Карточка игры -->
+         <div class="image-top">
+        <div class="dish-card">
+		<!-- Обложка игры -->
+    <img src="images\1.png">
+     <div class="dish-info">
+	 <!-- Название игры -->
+    <h3 style="color:#d74a49"><a href="guide.html?game=Bloons%20TD" style="color:#d74a49">Bloons TD 6</a></h3>
+	<!-- Описание -->
+    <p style="color:#eaeaea">- игра в жанре Tower Defense, разработанная и опубликованная компанией Ninja Kiwi.</p>
+  
+    </div></div>
+<div class="dish-card">
+    <img src="images\2.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49"><a href="guide.html?game=Stardew%20Valley" style="color:#d74a49">Stardew Valley</a></h3>
+    <p style="color:#eaeaea">- компьютерная игра в жанре симулятора жизни фермера с элементами ролевой игры, разработанная геймдизайнером Эриком Барони.</p>
+
+    </div></div>
+<div class="dish-card">
+<img src="images\3.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49"><a href="guide.html?game=Neighbours%20Hell" style="color:#d74a49">Neighbours back From Hell</a></h3>
+    <p style="color:#eaeaea">- сборник ремастеров двух частей игры Neighbours From Hell.</p>
+
+    </div></div>
+<div class="dish-card">
+    <img src="images\4.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49"><a href="guide.html?game=Henry%20Stickmin" style="color:#d74a49">The Henry Stickmin</a></h3>
+    <p style="color:#eaeaea">- компьютерная игра в жанре квеста.</p>
+
+    </div></div>
+<div class="dish-card">
+<img src="images\5.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49"><a href="guide.html?game=Yume%20Nikki" style="color:#d74a49">Yume Nikki</a></h3>
+    <p style="color:#eaeaea">- бесплатная компьютерная инди-игра, сюрреалистический квест.</p>
+
+    </div></div>
+<div class="dish-card">
+<img src="images\6.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49"><a href="guide.html?game=Chuchel" style="color:#d74a49">Chuchel</a></h3>
+    <p style="color:#eaeaea">- компьютерная игра-комедия в жанре квеста, разработанная Яромиром Плахи и студией Amanita Design.</p>
+
+    </div></div>
+    </div>
+
+<center><h1>Рекомендуемые игры</h1></center>
+      <div class="image-top">
+        <div class="dish-card">
+<img src="images\7.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49"><a href="guide.html?game=Transformice" style="color:#d74a49">Transformice</a></h3>
+    <p style="color:#eaeaea">- многопользовательская онлайн-игра в жанре платформера, разработанная французской независимой игровой студией Atelier 801.</p>
+
+    </div></div>
+<div class="dish-card">
+<img src="images\8.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49"><a href="guide.html?game=Hello%20Kitty" style="color:#d74a49">Hello Kitty Island Adventure</a></h3>
+    <p style="color:#eaeaea">- компьютерная игра в жанрах симулятор жизни и приключенческая игра, основанная на бренде Hello Kitty.</p>
+
+    </div></div>
+<div class="dish-card">
+<img src="images\9.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49"><a href="guide.html?game=Cat%20Bait" style="color:#d74a49">Cat Bait</a></h3>
+    <p style="color:#eaeaea">- казуальная игра с пиксельной графикой, выпущенная 27 августа 2024 года. Разработчик — Mayni prod.</p>
+
+    </div></div>
+<div class="dish-card">
+<img src="images\10.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49"><a href="guide.html?game=Sky%20Children" style="color:#d74a49">Sky: Children of the Light</a></h3>
+    <p style="color:#eaeaea">-  приключенческая инди-игра, разработанная и выпущенная компанией thatgamecompany 18 июля 2019 года.</p>
+
+    </div></div>
+<div class="dish-card">
+<img src="images\1.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49"><a href="guide.html?game=Bloons%20TD" style="color:#d74a49">Bloons TD 6</a></h3>
+    <p style="color:#eaeaea">- игра в жанре Tower Defense, разработанная и опубликованная компанией Ninja Kiwi.</p>
+  
+    </div></div>
+<div class="dish-card">
+<img src="images\4.png">
+     <div class="dish-info">
+    <h3 style="color:#d74a49"><a href="guide.html?game=Henry%20Stickmin" style="color:#d74a49">The Henry Stickmin</a></h3>
+    <p style="color:#eaeaea">- компьютерная игра в жанре квеста.</p>
+
+    </div></div>
+    </div>
+<!-- Блок информации о сайте -->
+           <center><h1>Как PlayWithEasy помогает вам</h1></center>
+    <div class="container2">
+	 <!-- Информационный блок 1 -->
+        <div class="block2">
+            <img src="images/information.png" alt="Иконка 1" class="icon">
+            <h2>Доступные инструкции</h2>
+            <p>Все наши гайды написаны понятным языком и структурированы так, чтобы каждый мог легко следовать им, улучшая свои навыки и игровую стратегию.</p>
+        </div>
+		     <!-- Информационный блок 2 -->
+        <div class="block2">
+            <img src="images/free.png" alt="Иконка 2" class="icon">
+            <h2>Бесплатный доступ</h2>
+            <p>Весь контент на нашем сайте доступен совершенно бесплатно, что позволяет каждому насладиться геймингом без дополнительных затрат.</p>
+        </div>
+		<!-- Информационный блок 3 -->
+        <div class="block2">
+            <img src="images/platform.png" alt="Иконка 3" class="icon">
+            <h2>Полезные советы для разнообразных платформ</h2>
+            <p>Наши гайды охватывают игры на различных платформах — от мобильных устройств до ПК, так что вы сможете найти информацию, соответствующую вашим предпочтениям.</p>
+        </div>
+		</div>
+		
+            </div></div>
+    </div></div>
+	<!-- Подвал сайта с информацией и ссылками -->
+   <footer>
+        <div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта">
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+			 <!-- Иконки социальных сетей для связи -->
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+		    <!-- Разделы с ссылками на полезные страницы -->
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		  <!-- Авторские права -->
+		<div class="footer-credits">© 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: flex;
+}
+
+.content {
+    width: 70%;
+    padding: 0px;
+}
+
+.sidebar {
+    position: fixed;
+    width: 25%;
+    top: 240px; /* Отодвигаем меню вниз от верхней части экрана */
+    right: 0;
+    border-left: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f0f0f0; /* Светлый фон для меню */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Небольшая тень для глубины */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #333; /* Цвет заголовка меню */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #555; /* Цвет текста ссылки */
+    padding: 5px 10px; /* Увеличим область клика */
+    transition: background 0.3s; /* Плавный переход фона */
+}
+
+.sidebar a:hover {
+    background-color: #dcdcdc; /* Цвет при наведении */
+}
+
+.sidebar a.active {
+    font-weight: bold;
+    color: #000; /* Цвет активной ссылки */
+    background-color: #c0c0c0; /* Цвет фона активной ссылки */
+}
+@media (min-width: 768px) {
+    .content {
+        width: 70%;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 25%;
+        top: 240px; 
+        right: 0;
+        border-left: 1px solid #ccc;
+        height: calc(100% - 240px); /* Устанавливаем высоту сайдбара */
+        overflow-y: auto; /* Делаем сайдбар прокручиваемым */
+    }
+    
+    .content {
+        padding: 20px; /* Немного больший отступ для десктопа */
+    }
+}
+
+@media (min-width: 480px) {
+    .content {
+        width: 70%;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 25%;
+        top: 240px; 
+        right: 0;
+        border-left: 1px solid #ccc;
+        height: calc(100% - 240px); /* Устанавливаем высоту сайдбара */
+        overflow-y: auto; /* Делаем сайдбар прокручиваемым */
+    }
+    
+    .content {
+        padding: 20px; /* Немного больший отступ для десктопа */
+    }
+}

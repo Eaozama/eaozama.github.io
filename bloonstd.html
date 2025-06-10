@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="menu.css">
+	 <link rel="stylesheet" href="guides.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+		       <!-- Модальное окно для отображения изображения -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="guides.js"></script>
+	
+               <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+			<button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+        </nav>
+    </header>
+		<div class="sidebar">
+            <h2>Содержание</h2>
+            <ul id="menu">
+                <li><a href="#section1">Обычные знания</a></li>
+                <li><a href="#section2">Военные знания</a></li>
+                <li><a href="#section3">Магические знания</a></li>
+				<li><a href="#section4">Знания поддержки</a></li>
+				<li><a href="#section5">Геройские знания</a></li>
+				<li><a href="#section6">Знания способностей</a></li>
+            </ul>
+        </div>
+
+	<div class="content">
+        <!-- Основной контент сайта -->
+  <center><h1>Лучшие обезьяньи знания</h1></center>
+<center>
+       <div class="country-descriptions">
+        <div class="main-block">
+<h3>Автор гайда: Смотрящий Гранат в Steam</h3>
+<h2 id="section1">Обычные знания</h2>
+             <div class="container3">
+			<p>В этой категории вы найдёте знания, делающие ваши основные башни ещё более мощными. Идеальный выбор для укрепления фундамента вашей обороны.</p>
+			<p>В качестве первой ветки для прокачки я бы не советовал её рассматривать, так как в других ветках есть улучшения, которые привязаны к ИГРЕ, а не БАШНЕ.</p>
+<img src="images/bloonstd6/1.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 882px; min-width: 664px; min-height: 282px;">
+</div>
+<h2 id="section2">Военные знания</h2>
+             <div class="container3">
+			<p>Военные знания усилят ваши военные башни, давая вам преимущество в борьбе с самыми крепкими воздушными и наземными врагами. Не пропустите возможность максимально увеличить огневую мощь.</p>
+			<p>Прокачка данной ветки может быть одной из первых, так как большинство военных обезьян - одни из самых полезных.</p>
+<img src="images/bloonstd6/2.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 882px; min-width: 664px; min-height: 282px;">
+</div>
+<h2 id="section3">Магические знания</h2>
+             <div class="container3">
+			<p>Разблокируйте секреты магических улучшений, чтобы призвать на поле боя непревзойдённые мистические силы. Магические башни станут вашими верными союзниками в сражении против натиска шаров.</p>
+			<p>Данную ветку я советую вам прокачивать 2-ой или 3-ей, так как друид 2-5-0 - одна из самых дисбалансных обезьян.</p>
+<img src="images/bloonstd6/3.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 882px; min-width: 664px; min-height: 282px;">
+</div>
+<h2 id="section4">Знания поддержки</h2>
+             <div class="container3">
+			<p>Исследуйте знания в области поддержки, чтобы улучшить эффективность ваших башен и оптимизировать ресурсное управление. Эти умения помогут вам укрепить оборону и расширить возможности на поле боя.
+</p>
+			<p>Тут всё довольно просто, полезно, но не всё.</p>
+<img src="images/bloonstd6/4.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 882px; min-width: 664px; min-height: 282px;">
+</div>
+<h2 id="section5">Геройские знания</h2>
+             <div class="container3">
+			<p>Сосредоточьтесь на улучшении своих героев, чтобы раскрыть их истинный потенциал. Улучшения в этой категории принесут новые способности и значительное усиление ваших лидеров.</p>
+			<p>Советуется к прокачке в самом начале игры, так как по большей части - Вы будете использовать героев в каждой игре.</p>
+<img src="images/bloonstd6/5.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 882px; min-width: 664px; min-height: 282px;">
+</div>
+<h2 id="section6">Знания способностей</h2>
+             <div class="container3">
+			<p>Углубитесь в изучение способностей, чтобы получить доступ к мощным временным бонусам, которые могут изменить ход битвы. Эти знания предоставят вам стратегическое преимущество в самые решающие моменты.
+</p>
+			<p>Я не считаю эту ветку впринципе чем-то стоящим, так как дойдя до 2-ого ветеранского ранга способностей накопилось у меня уже достаточно за всю игру, стоит к прокачке только 8-ое очко знаний ("Хорошие фермеры") и 9-ое очко знаний ("Бюджетное пополнение счёта"), ну и это если вы любите проходить боссов без каких либо ограничений.</p>
+<img src="images/bloonstd6/6.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 664px; max-height: 882px; min-width: 664px; min-height: 282px;">
+</div>
+</div>
+ </div>
+    </div>
+</center>
+         </div>
+
+   <footer>
+<div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">© 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

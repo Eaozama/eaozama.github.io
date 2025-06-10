@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="menu.css">
+	 <link rel="stylesheet" href="guides.css">
+	 <link rel="stylesheet" href="rev.css">
+	<link rel="stylesheet" href="stule.css">
+	 <link rel="stylesheet" href="hash.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+	<!-- Меню -->
+        <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+			<button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+			 <!-- Скрипт для обработки авторизации -->
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+        </nav>
+    </header>
+	<div class="content">
+        <!-- Основной контент сайта -->
+   <!-- Основной контент сайта -->
+    <div class="container5">
+        <h1>Обзоры Neighbours from Hell</h1>
+
+        <div class="review" id="review-1">
+            <h2 class="video-title">1) Игра от Майни - Cat Bait</h2>
+            <div class="video-container">
+                <iframe width="720" height="405" src="https://rutube.ru/play/embed/a4253886c90ac23bd756ca75c3332288/?skinColor=000000" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
+            <div class="video-info">
+                <p><strong>Автор:</strong> <span class="video-author">MoNoLo517 в RuTube</span></p>
+                <p><strong>Дата публикации:</strong> <span class="video-date">21 Сентября 2024</span></p>
+            </div>
+        </div>
+
+        <div class="review" id="review-2">
+            <h2 class="video-title">Cat Bait Demo Review</h2>
+            <div class="video-container">
+                <iframe width="720" height="405" src="https://rutube.ru/play/embed/c109781fe1fcdc3d005919ed3b57138a/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
+            <div class="video-info">
+                <p><strong>Автор:</strong> <span class="video-author">Agent_Joe в RuTube</span></p>
+                <p><strong>Дата публикации:</strong> <span class="video-date">5 Августа 2024</span></p>
+            </div>
+        </div>
+
+    </div>
+         </div>
+
+   <footer>
+        <div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+               <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">с 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

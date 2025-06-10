@@ -1,0 +1,86 @@
+
+.guide {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.guide-image {
+    width: 100%; /* Изображение будет растягиваться по ширине контейнера */
+    max-width: 200px; /* Максимальная ширина изображения */
+    cursor: pointer; /* Указатель мыши меняется на указатель */
+    transition: transform 0.3s; /* Плавная анимация при наведении */
+}
+
+.guide-image:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+.guide-title {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.guide-text {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5; /* Увеличивает пространство между строками */
+	margin-bottom: 10px;
+}
+.guide ul {
+    padding-left: 20px; /* Отступ слева для списка */
+    list-style-type: disc; /* Тип маркера списка (можно выбрать другие варианты) */
+    text-align: left; /* Выравнивание текста списка по левому краю */
+}
+
+.guide ul li {
+    font-size: 16px; /* Размер шрифта для элементов списка */
+    line-height: 1.5; /* Увеличиваем пространство между строками в списке */
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрываем модальное окно по умолчанию */
+    position: fixed; /* Зафиксировано относительно окна */
+    z-index: 1; /* Накладывается сверху */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ширина на весь экран */
+    height: 100%; /* Высота на весь экран */
+    overflow: auto; /* Добавляет прокрутку, если необходимо */
+    background-color: rgb(0, 0, 0); /* Фон черный */
+    background-color: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px; /* Максимальная ширина для модального изображения */
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    height: 150px;
+}

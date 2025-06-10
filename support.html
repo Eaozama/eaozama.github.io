@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <!-- Подключение внешних таблиц стилей -->
+    <link rel="stylesheet" href="styles.css">
+		 <link rel="stylesheet" href="support.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+<header>
+
+        <!-- Логотип и название сайта -->
+        <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <!-- Навигационное меню -->
+        <nav class="menu">
+            <!-- Кнопки перехода на разные страницы -->
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <!-- Выпадающее меню помощи -->
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+            <!-- Кнопка авторизации или выхода -->
+            <button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+            <!-- Скрипт для управления авторизацией -->
+            <script>
+                // Функция проверки статуса авторизации пользователя
+                function checkAuth() {
+                    const username = localStorage.getItem('username'); // Получение имени пользователя из хранилища
+                    const authButton = document.getElementById('authButton'); // Кнопка авторизации/выхода
+                    if (username) {
+                        // Если пользователь авторизован, отображаем кнопку выхода
+                        authButton.innerText = "Выйти";
+                        authButton.onclick = logout;
+                    } else {
+                        // Если пользователь не авторизован, перенаправляем на страницу входа
+                        location.href = 'login.html';
+                    }
+                }
+                // Функция выхода из аккаунта
+                function logout() {
+                    localStorage.removeItem('username'); // Удаление имени пользователя из хранилища
+                    location.href = 'login.html'; // Перенаправление на страницу входа
+                }
+                // Проверка статуса авторизации после загрузки документа
+                document.addEventListener('DOMContentLoaded', checkAuth);
+            </script>
+        </nav>
+    </header>
+	<!-- Контейнер для раздела FAQ -->
+	    <div class="containerfaq">
+	 <div class="button-container2">
+	 <!-- Контейнер с кнопками навигации по разделам -->
+		   <a href="chavo.html" class="button">ЧаВо</a>
+		   <!-- Контейнер с кнопками навигации по разделам -->
+        <a href="about.html" class="button">О команде</a>
+		<!-- Активная кнопка для раздела "О команде" -->
+        <a href="support.html" class="button active">Тех.поддержка</a>
+		</div>
+<!-- Контейнер для формы поддержки -->
+<div class="container4">
+    <!-- Заголовок раздела -->
+    <h1>Техническая поддержка</h1>
+
+    <!-- Форма для отправки обращения в поддержку -->
+    <form id="supportForm">
+        <!-- Метка и поле для ввода email -->
+        <label for="email">Ваш Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Метка и поле для темы сообщения -->
+        <label for="subject">Тема:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <!-- Метка и текстовое поле для сообщения -->
+        <label for="message">Сообщение:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <!-- Кнопка отправки формы -->
+        <button type="submit">Отправить</button>
+    </form>
+
+    <!-- Подвала с информацией и ссылкой на часто задаваемые вопросы -->
+    <div class="footer">
+        <p>Пожалуйста, прочитайте <a href="chavo.html">ЧаВо</a> перед отправкой вашего вопроса или проблемы.</p>
+    </div>
+</div>
+
+<!-- Подключение внешнего скрипта для обработки формы -->
+<script src="support.js"></script>
+        </div>
+    </div></div>
+	</div>
+
+   <footer>
+        <div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">© 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+	margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Занимает минимальную высоту 100vh */
+			  height: auto; /* Позволяет телу растягиваться по содержимому */
+}
+/* меню сайта началось */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f232a;
+    padding: 10px 20px;
+    color: #eaeaea;
+	z-index: 3;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 50; /* Размер иконки */
+    height: 50px; /* Размер иконки */
+}
+
+.menu {
+    display: flex;
+    gap: 30px; /* Отступ между элементами меню */
+}
+
+.menu-item {
+    background-color: #0f232a;
+    border: none;
+    color: #eaeaea;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+	font-family: Arial, sans-serif; /* Установка шрифта Arial */
+    font-size: 17px; /* Добавьте для управления размером шрифта */
+}
+
+.menu-item:hover {
+    background-color: #d74a49; /* Цвет при наведении */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #183e4b;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #eaeaea;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #d74a49;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* меню сайта закончилось */
+
+/* подвал начался */
+        main {
+            flex: 1; /* Основной контент занимает оставшееся пространство */
+			
+        }
+    footer {
+            display: flex;
+            flex-direction: column;
+            background-color: #0f232a; /* Черный фон */
+            color: #8ba0a4; /* Белый цвет текста для контраста */
+            padding: 20px;
+            border-top: 1px solid #ccc;
+			 position: relative; /* Чтобы подвал находился выше фона */
+    z-index: 2; /* Выше фона */
+			
+        }
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-top img {
+            height: 25px; /* Высота иконок */
+            margin-right: 10px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .footer-bottom {
+            display: flex;
+            flex-direction: column; /* Разделение на две строки */
+            align-items: flex-end; /* Выравнивание текста по правому краю */
+            margin-top: 10px;
+        }
+        .footer-links {
+            text-align: right; /* Выравнивание текста по правому краю */
+        }
+        .footer-credits {
+            text-align: left;
+        }
+/* подвал закончился */
+
+/* задний фон начался */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	
+    background-image: url('images/background.jpg'); /* Укажите путь к вашему изображению */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Размытие */
+    z-index: 1; /* Указываем, что это фоновый слой */
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); /* Затемнение */
+    z-index: 1; /* Это слой затемнения */
+}
+/* задний фон закончился */
+
+/* содержимое страницы */
+.container {
+    display: flex;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    flex: 1; /* Чтобы занять доступное пространство между заголовком и подвалом */
+}
+
+.content {
+    z-index: 2; /* Содержимое выше фона и затемнения */
+    width: 100vw; /* Ширина на весь экран */
+    height: 100vh; /* Высота на весь экран */
+    max-width: 1500px; /* Максимальная ширина блока */
+    max-height: 900px; /* Максимальная высота блока */
+    padding: 20px; /* Отступы внутри блока */
+    background: white; /* Фон блока белого цвета */
+    border-radius: 8px; /* Скругление углов блока */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для блока */
+    opacity: 0.95; /* Небольшая прозрачность */
+    overflow: auto; /* Прокрутка, если содержимое превышает размеры блока */
+    margin-top: 20px; /* Отступ сверху */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+
+/* содержимое страницы */
+
+/* градиенты */
+.gradient-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; /* Высота градиента сверху */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+    z-index: 2; /* Выше фона */
+}
+
+.gradient-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; /* Высота градиента снизу */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    z-index: 2; /* Выше фона */
+}
+/* градиенты */
+
+/* бот */
+.chibi {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chibi img {
+    width: 250px; /* размер мини-чибика */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid black;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    text-align: center; /* Центрировать текст */
+}
+
+.popup p {
+    margin: 0 0 15px; /* Добавление отступа между текстом и кнопками */
+	color:black;
+}
+
+.popup a,
+.popup button {
+    display: inline-block;
+    margin: 5px 10px; /* Добавим немного отступов между кнопками */
+    padding: 10px 20px; /* Внутренние отступы */
+    border: none;
+    border-radius: 5px; /* Скругление углов */
+    cursor: pointer;
+}
+
+.popup a {
+    background-color: #183e4b; /* Зеленый цвет для кнопки 'Посетить' */
+    color: white;
+    text-decoration: none; /* Убрать подчеркивание у ссылки */
+}
+
+.popup button {
+    background-color: #8ba0a4; /* Красный цвет для кнопки 'Нет' */
+    color: white;
+}
+
+.popup a:hover,
+.popup button:hover {
+    opacity: 0.8; /* Затемнение кнопки при наведении */
+}
+
+
+/* бот */
+
+/* блоки с иконками */
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    padding: 20px;
+	font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.block2 {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 52px;
+    text-align: center;
+}
+
+.icon2 {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+/* блоки с иконками */
+a {
+  color: black;
+  text-decoration: none; /* no underline */
+}
+/* содержимое страницы2 */
+.container11 {
+    display: flex;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    flex: 1; /* Чтобы занять доступное пространство между заголовком и подвалом */
+}
+
+.content11 {
+    z-index: 2; /* Содержимое выше фона и затемнения */
+    max-width: 1500px; /* Максимальная ширина блока */
+    padding: 20px; /* Отступы внутри блока */
+    background: white; /* Фон блока белого цвета */
+    border-radius: 8px; /* Скругление углов блока */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для блока */
+    opacity: 0.95; /* Небольшая прозрачность */
+}
+/* содержимое страницы */
+.container5 {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.review {
+    margin-bottom: 40px; /* Расстояние между обзорами */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Соотношение 16:9 */
+    height: 0;
+}
+
+.video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-info {
+    margin-top: 10px;
+}
+
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Уменьшаем размер шрифта для мобильных */
+    padding: 10px; /* Уменьшаем отступы */
+  }
+  /* Основные стили остаются без изменений */
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 10px; /* Уменьшаем отступы в заголовке для мобильных устройств */
+    }
+
+    .logo {
+        flex-grow: 1; /* Позволяет логотипу занимать больше места */
+        text-align: center; /* Центрируем логотип */
+    }
+
+    .menu {
+        display: flex; /* Сохраняем горизонтальное меню, но меняем отступы */
+        gap: 15px; /* Уменьшаем отступы между элементами меню */
+    }
+
+    .menu-item {
+        font-size: 15px; /* Уменьшаем размер шрифта для мобильных устройств */
+        padding: 8px 10px; /* Уменьшаем внутренние отступы для компактности */
+    }
+}
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) { /* Для экранов шириной до 768px */
+    .content {
+        padding: 10px; /* Уменьшаем отступы для мобильных */
+        margin-top: 10px; /* Уменьшаем отступы сверху */
+        margin-bottom: 10px; /* Уменьшаем отступы снизу */
+        border-radius: 5px; /* Уменьшаем скругление углов */
+    }
+}
+
+@media (max-width: 480px) { /* Для экранов шириной до 480px */
+    .content {
+        height: auto; /* Убираем фиксированную высоту */
+        max-height: none; /* Убираем максимальную высоту */
+    }
+}
+/* Изменения для мобильных устройств */
+@media (max-width: 768px) { /* Если ширина экрана меньше 768px */
+    .container2 {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) { /* Если ширина экрана меньше 480px */
+    .container2 {
+        grid-template-columns: 1fr; /* 1 колонка */
+        gap: 15px;
+    }
+}
+
+.block2 {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.icon2 {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    .dish-card {
+        width: 120px; /* Уменьшение ширины для более мелких экранов */
+        height: 200px; /* Уменьшение высоты для более мелких экранов */
+    }
+
+    .dish-info {
+        padding: 0.3rem; /* Еще меньшие отступы */
+    }
+
+    p {
+        font-size: 12px; /* Уменьшение размера текста для мобильных версий */
+    }
+	h3 {
+        font-size: 13px; /* Уменьшение размера текста для мобильных версий */
+    }
+
+}
+@media (max-width: 480px) {
+    .chibi img {
+        width: 120px; /* Еще больше уменьшаем размер для очень маленьких экранов */
+    }
+    
+    .popup {
+        width: 90%; /* Увеличиваем ширину popup на меньших экранах */
+        max-width: 280px; /* Ограничиваем максимальную ширину */
+    }
+    
+    .popup p {
+        font-size: 12px; /* Уменьшаем размер шрифта до 12px для более мелких экранов */
+    }
+
+    .popup a,
+    .popup button {
+        font-size: 12px; /* Уменьшаем размер шрифта для кнопок */
+        padding: 7px 12px; /* Уменьшаем внутренние отступы для кнопок */
+    }
+}
+@media (max-width: 768px) {
+    .chibi img {
+        width: 120px; /* Еще больше уменьшаем размер для очень маленьких экранов */
+    }
+    
+    .popup {
+        width: 90%; /* Увеличиваем ширину popup на меньших экранах */
+        max-width: 280px; /* Ограничиваем максимальную ширину */
+    }
+    
+    .popup p {
+        font-size: 12px; /* Уменьшаем размер шрифта до 12px для более мелких экранов */
+    }
+
+    .popup a,
+    .popup button {
+        font-size: 12px; /* Уменьшаем размер шрифта для кнопок */
+        padding: 7px 12px; /* Уменьшаем внутренние отступы для кнопок */
+    }
+}

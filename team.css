@@ -1,0 +1,37 @@
+.team-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.team-member {
+    display: flex; /* Устанавливаем flexbox для горизонтального выравнивания */
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.avatar {
+    width: 80px; /* Ширина аватарки */
+    height: 80px; /* Высота аватарки */
+    border-radius: 50%; /* Скругляем углы для получения круглой аватарки */
+    margin-right: 15px; /* Отступ справа от аватарки */
+}
+
+.member-info h3 {
+    margin: 0; /* Убираем отступы для заголовка */
+    font-size: 1.5em; /* Размер шрифта для никнейма */
+}
+
+.position {
+    color: #888; /* Цвет текста для должности */
+}
+
+.achievements {
+    margin-top: 5px; /* Отступ сверху для достижений */
+    font-size: 0.9em; /* Размер шрифта для достижений */
+    color: #555; /* Цвет текста для достижений */
+}

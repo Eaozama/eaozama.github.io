@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="menu.css">
+	 <link rel="stylesheet" href="guides.css">
+	 <link rel="stylesheet" href="rev.css">
+	<link rel="stylesheet" href="stule.css">
+	 <link rel="stylesheet" href="hash.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+	<!-- Меню -->
+        <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+			<button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+			 <!-- Скрипт для обработки авторизации -->
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+        </nav>
+    </header>
+	<div class="content">
+        <!-- Основной контент сайта -->
+   <!-- Основной контент сайта -->
+    <div class="container5">
+        <h1>Обзоры Stardew Valley</h1>
+
+        <div class="review" id="review-1">
+            <h2 class="video-title">ВСЯ СУТЬ УДАЧИ В STARDEW VALLEY</h2>
+            <div class="video-container">
+                <iframe src="https://vk.com/video_ext.php?oid=-227742751&id=456239023&hd=2&autoplay=0" width="720" height="405" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <p><strong>Автор:</strong> <span class="video-author">ТВАЙС в ВКонтакте</span></p>
+                <p><strong>Дата публикации:</strong> <span class="video-date">12 Ноября 2024</span></p>
+            </div>
+        </div>
+
+        <div class="review" id="review-2">
+            <h2 class="video-title">StarDew Valley обзор ► СИМУЛЯТОР ЖИЗНИ _1</h2>
+            <div class="video-container">
+                <iframe src="https://vk.com/video_ext.php?oid=-193181102&id=456260770&hd=2&autoplay=0" width="720" height="405" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <p><strong>Автор:</strong> <span class="video-author">АРХИВ YouTube перезаливы в ВКонтакте</span></p>
+                <p><strong>Дата публикации:</strong> <span class="video-date">15 Февраля 2021</span></p>
+            </div>
+        </div>
+
+        <div class="review" id="review-3">
+            <h2 class="video-title">100 Дней новичка в Stardew Valley | Мой первый опыт</h2>
+            <div class="video-container">
+                <iframe src="https://vk.com/video_ext.php?oid=-226769052&id=456239042&hd=2&autoplay=0" width="720" height="405" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <p><strong>Автор:</strong> <span class="video-author">KOZ в ВКонтакте</span></p>
+                <p><strong>Дата публикации:</strong> <span class="video-date">23 Декабря 2024</span></p>
+            </div>
+        </div>
+
+    </div>
+         </div>
+
+   <footer>
+        <div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+               <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">с 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

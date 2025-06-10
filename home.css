@@ -1,0 +1,265 @@
+
+/* Красный блок с информацией */
+.red-info-block {
+    background-color: #8ba0a4;
+    color: #183e4b;
+    padding: 20px;
+    text-align: center;
+}
+
+.red-info-block h2 {
+    margin-top: 30px;
+}
+
+.red-info-block p {
+    margin-bottom: 30px;
+}
+
+
+.country-descriptions {
+    display: flex;
+    justify-content: space-around;
+    background-color: #8ba0a4; /* Красный фон */
+    padding: 20px;
+    width: 100%; /* Блок займет всю ширину */
+    box-sizing: border-box; /* Чтобы отступы не влияли на ширину */
+}
+
+.country-card {
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+}
+
+p {
+    color: #183e4b; /* Белый цвет текста */
+    line-height: 1.5;
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.text-block {
+    background-color: #183e4b;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #eaeaea;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.image-top,
+.image-bottom {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.image-item {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-block {
+  padding: 20px;
+  background-color: #183e4b;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.image-left,
+.image-right {
+  margin: 0 10px;
+}
+
+.dish-card {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Тень */
+    border-radius: 8px; /* Закругленные углы */
+	
+}
+
+.dish-card img {
+	width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обрезка изображения для сохранения пропорций */
+	 display: block;
+  transition: filter 0.3s ease;
+}
+.dish-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dish-card:hover img {
+  filter: brightness(70%);
+}
+
+.dish-card:hover .dish-info {
+  opacity: 1;
+}
+
+.container4 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tour-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tour-block {
+  background-color: #183e4b;
+  padding: 10px;
+  margin-right: 5px;
+  box-sizing: border-box;
+  width: 24%;
+}
+
+.tour-block img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tour-block h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.other-tours {
+  width: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.other-tours h2 {
+  margin-top: 0;
+}
+
+.other-tours ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.other-tours li {
+  margin-bottom: 5px;
+}
+
+.container5 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-block {
+    border-radius: 5px;
+    padding: 20px;
+    width: 48%;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+}
+
+.country-descriptions2 {
+    background-color: #d74a49; /* Красный фон */
+    padding: 20px;
+    width: 100%; /* Блок займет всю ширину */
+
+.section11 {
+    background-color: #8ba0a4;
+    padding: 20px;
+    margin: 10px;
+
+.main-block {
+            margin: 20px;
+            padding: 20px;
+            width: 60%;
+            text-align: center;
+            background-color: #eaeaea;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+        }
+
+   .container1 {
+            display: flex;
+            border: 1px solid #ccc;
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .image {
+            flex: 0 0 150px; /* Ширина изображения */
+            height: 150px; /* Высота изображения */
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%; /* Ширина изображения 100% от родительского блока */
+            height: auto;
+            display: block; /* Убираем пробелы под изображением */
+        }

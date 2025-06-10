@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="menu.css">
+	 <link rel="stylesheet" href="guides.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+		       <!-- Модальное окно для отображения изображения -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="guides.js"></script>
+	
+               <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+			<button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+        </nav>
+    </header>
+		<div class="sidebar">
+            <h2>Содержание</h2>
+            <ul id="menu">
+                <li><a href="#section1">Утречко!</a></li>
+                <li><a href="#section2">Бла-Бла-Бла</a></li>
+                <li><a href="#section3">Любовь к голубым бобам</a></li>
+				<li><a href="#section4">Шляпник</a></li>
+				<li><a href="#section5">А я тучи разгоню руками</a></li>
+				<li><a href="#section6">Создатель</a></li>
+				<li><a href="#section7">Чемпион среди улиток</a></li>
+            </ul>
+        </div>
+
+	<div class="content">
+        <!-- Основной контент сайта -->
+  <center><h1>Достижения в CHUCHEL</h1></center>
+<center>
+       <div class="country-descriptions">
+        <div class="main-block">
+<h3>Автор гайда: .8'13 в Steam</h3>
+<h2 id="section1">Утречко!</h2>
+            <div class="guide">
+			<img src="images/chuchel/1.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<b>Для получения данного достижения необходимо кликнуть на все предметы с которыми Вы можете взаимодействовать в комнате! (Чтобы понять можно ли с ними взаимодействовать, достаточно навести на них курсор мыши и он видоизменится).</b></p>
+<p class="guide-text">Предметы для взаимодействия:</p>
+<p class="guide-text">
+<ul>
+                <li>Колонки</li>
+                <li>Будильник</li>
+                <li>Птички</li>
+				<li>Гном</li>
+				<li>Все картины</li>
+            </ul>
+</p>
+<img src="images/chuchel/2.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+</div>
+
+<h2 id="section2">Бла-Бла-Бла</h2>
+            <div class="guide">
+			<img src="images/chuchel/3.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<b>Для получения данного достижение необходимо трижды нажать на "Желтое существо". Как показано на скриншоте ниже, у "Желтого существа" после нажатия появится кнопка с надписью "BLA".</b></p>
+<p class="guide-text">Поговорите с существом три раза и достижение Ваше!</p>
+<img src="images/chuchel/4.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+</div>
+ 
+ <h2 id="section3">Любовь к голубым бобам</h2>
+            <div class="guide">
+			<img src="images/chuchel/5.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<b>Для получения данного достижения необходимо взаимодействовать с бобами. Не известно имеет ли смысл какой-то алгоритм, но выполнить я смог это достижения вот таким образом:</b></p>
+<p class="guide-text">
+<ul>
+                <li>Съедаем синие бобы</li>
+                <li>Съедаем зеленые и синие бобы</li>
+                <li>Съедаем красные и синие бобы</li>
+				<li>Съедаем оранжевые и синие бобы (Бобы оранжевого цвета сбиваются в соседней левой комнате, где сидит "Большое существо")</li>
+            </ul>
+</p>
+<img src="images/chuchel/6.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+<img src="images/chuchel/7.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+</div>
+ 
+  <h2 id="section4">Шляпник</h2>
+            <div class="guide">
+			<img src="images/chuchel/8.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<b>Для получения данного достижения необходимо поочередно надевать каждую шляпу и взаимодействовать с каждыми предметами в комнате. Каждая шляпа это разное измерение и в каждом измерение предметы разные с виду, но расположены они одинаково.</b></p>
+<p class="guide-text"><b>Поэтому в стандартной шляпе "Чучела" необходимо взаимодействовать с такими предметами:</b></p>
+<p class="guide-text">
+<ul>
+                <li>Радиоприемник (Выполнить все возможные действия)</li>
+                <li>Душ (Выполнить все возможные действия)</li>
+                <li>Клетка с вишней (Выполнить все возможные действия)</li>
+            </ul>
+</p>
+<p class="guide-text"><b>В зимней шапке необходимо взаимодействовать с такими предметами:</b></p>
+<p class="guide-text">
+<ul>
+                <li>Шар (Выполнить все возможные действия)</li>
+                <li>Сосульки (Выполнить все возможные действия)</li>
+                <li>Снеговик (Выполнить все возможные действия)</li>
+            </ul>
+</p>
+<p class="guide-text"><b>И наконец в шапке скомороха необходимо взаимодействовать с такими предметами:</b></p>
+<p class="guide-text">
+<ul>
+                <li>Гриб (Выполнить все возможные действия)</li>
+                <li>Красная кнопка (Выполнить все возможные действия)</li>
+                <li>Кактус (Выполнить все возможные действия)</li>
+            </ul>
+</p>
+<img src="images/chuchel/9.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+<img src="images/chuchel/10.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+<img src="images/chuchel/11.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+</div>
+ 
+ <h2 id="section5">А я тучи разгоню руками</h2>
+            <div class="guide">
+			<img src="images/chuchel/12.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<b>Для получения данного достижения, нужно стрелять по всем облакам.</b></p>
+<p class="guide-text">
+<ul>
+                <li>Сначала стреляем по всем облакам и смотрим показанные сцены.</li>
+                <li>Потом стреляем по двум нижним облакам, тем самым соединяем их.</li>
+                <li>Стреляем в большое новое облако и смотрим сцену.</li>
+				<li>Стреляем так же по двум из трех облаков сверху, смотрим сцену.</li>
+				<li>Соединяем большое облако с маленьким верхнем облаком , смотрим сцену.</li>
+            <li>И наконец стреляем в нижнее и верхнее облако и смотрим сцену.</li>
+			</ul>
+</p>
+<p class="guide-text">
+	Чтобы облака соединились между собой, необходимо стрелять в свободную область возле облака, например ниже него.</p>
+<img src="images/chuchel/13.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+</div>
+
+ <h2 id="section6">Создатель</h2>
+            <div class="guide">
+			<img src="images/chuchel/14.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<b>Для прохождения данного достижения нужно делать опыты с пробирками. Возможно есть какой-то другой порядок использования пробирок, но я делал так:</b></p>
+<p class="guide-text"><b>1.</b></p>
+<p class="guide-text">Выбираем для обоих персонажей синие капсулы и жидкость из бутылочки слева</p>
+<p class="guide-text">Выбираем для обоих одинаковые капли из пробирки "Радость"</p>
+<p class="guide-text"><b>2.</b></p>
+<p class="guide-text">Выбираем для обоих синие капсулы и жидкость из бутылочки справа</p>
+<p class="guide-text">Выбираем для обоих одинаковые капли из пробирки "Грусть"</p>
+<p class="guide-text"><b>3.</b></p>
+<p class="guide-text">Выбираем для обоих синие капсулы и жидкость из бутылочки справа</p>
+<p class="guide-text">Выбираем для обоих одинаковые капли из пробирки "Радость"</p>
+<p class="guide-text"><b>4.</b></p>
+<p class="guide-text">Выбираем для обоих синие капсулы и жидкость из бутылочки слева</p>
+<p class="guide-text">После получения достижения, выбираем для обоих капли из пробирки "Грусть".</p>
+<img src="images/chuchel/15.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+</div>
+ 
+  <h2 id="section7">Чемпион среди улиток</h2>
+            <div class="guide">
+			<img src="images/chuchel/16.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<b>Данное достижение возможно получить в финальном задании игры "Chuchel".
+Для этого необходимо выиграть гонку "улиток" у нашего злого зеленого клона.</b></p>
+<p class="guide-text">Для победы нужно нажимать на стрелку, которая будет направлена в правую сторону и на бустеры, которые будут всплывать над клеткой с вишенкой.</p>
+<img src="images/chuchel/17.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+</div>
+ 
+</div>
+</div>
+ </div>
+    </div>
+</center>
+         </div>
+
+   <footer>
+<div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">© 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

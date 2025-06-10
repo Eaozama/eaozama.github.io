@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="menu.css">
+	 <link rel="stylesheet" href="guides.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+		       <!-- Модальное окно для отображения изображения -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="guides.js"></script>
+	
+               <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+			<button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+        </nav>
+    </header>
+		<div class="sidebar">
+            <h2>Содержание</h2>
+            <ul id="menu">
+                <li><a href="#section1">Красный</a></li>
+                <li><a href="#section2">Синий</a></li>
+                <li><a href="#section3">Голубой</a></li>
+				<li><a href="#section4">Зеленый</a></li>
+				<li><a href="#section5">Фиолетовый</a></li>
+				<li><a href="#section6">Оранжевый</a></li>
+            </ul>
+        </div>
+
+	<div class="content">
+        <!-- Основной контент сайта -->
+  <center><h1>Все цвета в скае</h1></center>
+<center>
+       <div class="country-descriptions">
+        <div class="main-block">
+<h3>Автор гайда: tipoponlo(!) и соавторы в Steam</h3>
+<h2 id="section1">Красный</h2>
+            <div class="guide">
+<img src="images/skychildren/2.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Заходите в золотую пустошь, и прыгайте в воронку</center></p>
+<img src="images/skychildren/4.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>После приземления двигайтесь вправо</center></p>
+	<img src="images/skychildren/5.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>От лодки идите вперед</center></p>
+		<img src="images/skychildren/6.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Вы увидите корабль, и проводника</center></p>
+			<img src="images/skychildren/7.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Летите к пещере за кораблем</center></p>
+				<img src="images/skychildren/8.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Тут будет летать красная сфера, просто коснитесь ее</center></p>
+</div>
+
+<h2 id="section2">Синий</h2>
+            <div class="guide">
+<img src="images/skychildren/9.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Зайдите в Долину Триумфа, и катитесь по снежной трассе вниз</center></p>
+<img src="images/skychildren/10.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Вы должны доехать до места на фото, там будет спуск вниз</center></p>
+	<img src="images/skychildren/11.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Встаньте на лед, тем самым сломав его, после чего ищите синюю сферу</center></p>
+</div>
+
+<h2 id="section3">Голубой</h2>
+            <div class="guide">
+<img src="images/skychildren/12.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Заходим в прерию, и сходу сворачиваем назад</center></p>
+<img src="images/skychildren/13.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Мы появимся на небольшой поляне, а в облаках будет летать голубая сфера</center></p>
+</div>
+
+<h2 id="section4">Зеленый</h2>
+            <div class="guide">
+<img src="images/skychildren/14.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Заходите в прерию, и летите вперед</center></p>
+<img src="images/skychildren/15.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Сворачивайте на право, и заходите в щель</center></p>
+	<img src="images/skychildren/16.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Летите на остров слева</center></p>
+		<img src="images/skychildren/17.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>На этот остров через 1-2 минуты, спуститься зелёная сфера</center></p>
+</div>
+
+<h2 id="section5">Фиолетовый</h2>
+            <div class="guide">
+<img src="images/skychildren/18.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Заходите в хранилище знаний, затем летите к правой стене. Там будет дверь, для открытия которой понадобятся два игрока</center></p>
+<img src="images/skychildren/19.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>После этого вы можете увидеть фиолетовую сферу, которая летает в правой стороне карты</center></p>
+	<img src="images/skychildren/20.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Садитесь на камень, и поджидайте</center></p>
+</div>
+
+<h2 id="section6">Оранжевый</h2>
+            <div class="guide">
+<img src="images/skychildren/21.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Заходите в Тайный лес, и летите до 3 этапа (там где храм)</center></p>
+<img src="images/skychildren/22.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Летите на левую часть карты</center></p>
+	<img src="images/skychildren/23.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 600px; max-height: 600px; min-width: 100px; min-height: 100px;">
+	<p class="guide-text">
+	<center>Там будет летать оранжевая сфера, ловите ее, и заряжайте свет от грибов на деревьях</center></p>
+</div>
+
+</div>
+</div>
+ </div>
+    </div>
+</center>
+         </div>
+
+   <footer>
+<div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">© 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

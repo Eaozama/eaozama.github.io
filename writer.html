@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактор статей</title>
+    <link rel="stylesheet" href="redactor.css">
+	<style>
+	body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .editor-container {
+            margin-bottom: 20px;
+        }
+        #editor {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 100%;
+            height: 300px;
+            overflow: auto;
+            font-size: 16px;
+        }
+        .editor-toolbar {
+            margin-bottom: 10px;
+        }
+			</style>
+</head>
+<body>
+    <h1>Редактор статей</h1>
+   <div class="editor-container">
+    <h2>Поле</h2>
+    <div class="editor-toolbar">
+        <button onclick="formatText('bold', 0)">Жирный</button>
+        <button onclick="formatText('italic', 0)">Курсив</button>
+        <button onclick="formatText('underline', 0)">Подчёркнутый</button>
+        <button onclick="formatText('strikeThrough', 0)">Зачеркнутый</button>
+        <button onclick="addHeading(0)">Заголовок</button>
+        <input type="file" id="fileInput1" accept=".txt" onchange="loadFile(event, 0)">
+        <button onclick="saveFile(0)">Сохранить Как</button>
+        <button onclick="clearContent(0)">Очистить</button>
+    </div>
+    <div id="editor0" contenteditable="true"></div>
+</div>
+	
+	<div class="help-icon" onclick="openHelp()">
+        Помощь
+    </div>
+
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeHelp()">&times;</span>
+            <h2>Помощь по редактору статей</h2>
+			<p>Перед написанием статьи прочтите <a href="question.html">правила нашего сообщества</a>.</p>
+            <p>Этот редактор статей позволяет вам:</p>
+            <ul>
+                <li>Форматировать текст (жирный, курсив, подчеркнутый).</li>
+                <li>Сбросить все стили текста.</li>
+                <li>Выбирать заголовки (H1, H2, H3).</li>
+                <li>Сохранять и загружать статьи в локальном хранилище.</li>
+                <li>Сохранять статьи в текстовый файл.</li>
+                <li>Загружать изображения с компьютера и отображать их на странице.</li>
+            </ul>
+            <p>Надеемся, это поможет вам в ваших задачах!</p>
+        </div>
+    </div>
+
+<div class="exit-icon" onclick="openExit()">
+        Выйти из редактора
+    </div>
+
+    <div id="exit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeExit()">&times;</span>
+            <h2>Вы точно хотите выйти?</h2>
+			<p>Перед выходом рекомендуется скачать черновик.</p>
+           
+            <p><a href="index.html">Для выхода из редактора нажмите сюда</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

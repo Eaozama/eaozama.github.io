@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="menu.css">
+	 <link rel="stylesheet" href="guides.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+		       <!-- Модальное окно для отображения изображения -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="guides.js"></script>
+	
+               <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+			<button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+        </nav>
+    </header>
+		<div class="sidebar">
+            <h2>Содержание</h2>
+            <ul id="menu">
+                <li><a href="#section1">Прохождение уровней</a></li>
+                <li><a href="#section2">Скины</a></li>
+                <li><a href="#section3">Коты помощники</a></li>
+				<li><a href="#section4">Враги</a></li>
+				<li><a href="#section5">Боссы</a></li>
+				<li><a href="#section6">Другое</a></li>
+            </ul>
+        </div>
+
+	<div class="content">
+        <!-- Основной контент сайта -->
+  <center><h1>Все Достижения в Cat Bait [37/37]</h1></center>
+<center>
+       <div class="country-descriptions">
+        <div class="main-block">
+<h3>Автор гайда: The Dude и соавторы в Steam</h3>
+<h2 id="section1">Прохождение уровней</h2>
+            <div class="container3">
+			<img src="images/catbait/1.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Ну, Теперь Понятно!</b> - Пройти обучение.</p>
+</div>
+ <div class="container3">
+ <img src="images/catbait/2.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Прогулка по Полю</b> - Зеленая Поляна была зачищена! (Легкий)</p>
+</div>
+ <div class="container3">
+ <img src="images/catbait/3.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Сражение за Город</b> - Зеленая Поляна была зачищена! (Обычный)</p>
+</div>
+ <div class="container3">
+<img src="images/catbait/4.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Сумерки</b> - Проклятый Лес был зачищен! (Легкий)</p>
+</div>
+ <div class="container3">
+<img src="images/catbait/5.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Полнолуние</b> - Проклятый Лес был зачищен! (Обычный)</p>
+</div>
+ <div class="container3">
+<img src="images/catbait/6.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Морская Прогулка</b> - Морская Машина была зачищена! (Легкий)</p>
+</div>
+ <div class="container3">
+<img src="images/catbait/7.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Морское Происшествие</b> - Морская Машина была зачищена! (Обычный)</p>
+</div>
+<hr>
+<h2 id="section2">Скины</h2>
+			   <div class="container3">
+<img src="images/catbait/8.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Пушистый Ловкач</b> - Скин "Пушистый Ловкач" вы получите пройдя Обучение в игре.</p>
+</div>
+ <div class="container3">
+<img src="images/catbait/9.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Кот... Или Мышь?</b> - Скин "Кот... Или Мышь?" вы получите пройдя первую локацию "Зеленая Поляна".</p>
+</div>
+ <div class="container3">
+<img src="images/catbait/10.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Кототехник</b> - Скин "Кототехник" вы получите пройдя вторую локацию "Проклятый Лес".</p>
+</div>
+<hr>
+<h2 id="section3">Коты помощники</h2>
+			   <div class="container3">
+<img src="images/catbait/11.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Зоркий Глаз</b> - Выбрать 5 раз Кота Лучника.</p>
+</div>
+<div class="container3">
+<img src="images/catbait/12.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Сила Природы</b> - Выбрать 5 раз Кошку Друида.</p>
+</div>
+<div class="container3">
+<img src="images/catbait/13.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Помощь Свыше</b> - Выбрать 5 раз Кота Монаха.
+</p>
+</div>
+<div class="container3">
+<img src="images/catbait/14.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>На Протеине</b> -  Выбрать 5 раз Кота Качка.</p>
+</div>
+<div class="container3">
+<img src="images/catbait/15.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Кручу Верчу</b> - Выбрать 5 раз Кота Шамана.</p>
+</div>
+<div class="container3">
+<img src="images/catbait/16.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Поддержка с Воздуха</b> - Выбрать 5 раз Кота Механика.</p>
+</div>
+<div class="container3">
+<img src="images/catbait/17.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Путь Тени</b> - Выбрать 5 раз Кота Ниндзя.</p>
+</div>
+<div class="container3">
+<img src="images/catbait/18.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Обряд Экзорцизма</b> - Выбрать 5 раз Кота Экзорциста.</p>
+</div>
+<div class="container3">
+<img src="images/catbait/19.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Искусство - это Взрыв!</b> -  Выбрать 5 раз Кота Подрывника.</p>
+</div>
+<hr>
+<h2 id="section4">Враги</h2>
+<div class="container3">
+<img src="images/catbait/20.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Дератизация</b> - Убить 500 Мышей Солдат. Мышей Солдат можно встретить в первой и второй локации: "Зеленая Поляна" и "Проклятый Лес".</p>
+</div>
+<div class="container3">
+<img src="images/catbait/21.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Охотник на Вампиров</b> - Убить 300 Летучих Мышей. Летучих Мышей можно встретить в первой и второй локации: "Зеленая Поляна" и "Проклятый Лес".</p>
+</div>
+<div class="container3">
+<img src="images/catbait/22.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Больше не Постреляют</b> - Убить 250 Мышей Лучников. Мышей Лучников можно встретить в первой и второй локации: "Зеленая Поляна" и "Проклятый Лес".</p>
+</div>
+<div class="container3">
+<img src="images/catbait/23.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Сгорел на Работе</b> - Убить 200 Мышей Магов. Мышей Магов можно встретить в первой и второй локации: "Зеленая Поляна" и "Проклятый Лес"</p>
+</div>
+<div class="container3">
+<img src="images/catbait/25.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>НУ И КТО ТУТ СИЛЕН?</b> - Убить 100 Мышей Рыцарей. Мышей Рыцарей можно встретить только в первой локации: "Зеленая Поляна".</p>
+</div>
+<div class="container3">
+<img src="images/catbait/26.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Медленно, но Верно</b> - Убить 100 Мышей Магов Замедления. Мышей Магов Замедления можно встретить в первой локации и второй локации: "Зеленая Поляна" и "Проклятый Лес".</p>
+</div>
+<div class="container3">
+<img src="images/catbait/27.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Мастер Очищения</b> - Убить 100 Зловещих Тотемов. Зловещих Тотемов можно встретить только во второй локации: "Проклятый Лес".</p>
+</div>
+<div class="container3">
+<img src="images/catbait/28.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Последнее Перевоплощение</b> - Убить 100 Мышей Оборотней. Мышей Оборотней можно встретить только во второй локации: "Проклятый Лес".</p>
+</div>
+<div class="container3">
+<img src="images/catbait/29.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Взболтать, но не Смешивать</b> - Убить 100 Мышей Алхимиков. Мышей Алхимиков можно встретить только в третьей локации: "Морская Машина".</p>
+</div>
+<div class="container3">
+<img src="images/catbait/30.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Клапан Сорвало?</b> - Уничтожить 100 Паровых Тотемов. Паровых Тотемов можно встретить только в третьей локации: "Морская Машина".</p>
+</div>
+<div class="container3">
+<img src="images/catbait/31.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Дефектная Модель</b> - Уничтожить 200 Взрывных Робомышей. Взрывных Робомышей можно встретить только в третьей локации: "Морская Машина".</p>
+</div>
+<div class="container3">
+<img src="images/catbait/32.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Кто-то Промахнулся</b> -  Убить 100 Мышей Стрелков. Мышей Стрелков можно встретить только в третьей локации: "Морская Машина".</p>
+</div>
+<div class="container3">
+<img src="images/catbait/33.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Конец Планового Производства</b> - Уничтожить 100 Робо-Заводов. Робо-Заводов можно встретить только в третьей локации: "Морская Машина".</p>
+</div>
+<div class="container3">
+<img src="images/catbait/34.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Ремонту Не Подлежит</b> - Убить 100 Мышей Механиков. Мышей Механиков можно встретить только в третьей локации: "Морская Машина".</p>
+</div>
+<hr>
+<h2 id="section5">Боссы</h2>
+			   <div class="container3">
+<img src="images/catbait/35.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Сыр не Помог</b> - Убить 3 Босса Наездника на Крысе. Этот босс встречается в конце первой локации: "Зеленая Поляна"</p>
+				   <div class="container3">
+<img src="images/catbait/36.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Гроза Вампиров</b> - Убить 3 Босса Вампира. Этот босс встречается в конце второй локации: "Проклятый Лес"</p>
+				   <div class="container3">
+<img src="images/catbait/37.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Кто выпустил собаку?</b> - Уничтожить 3 Босса Робопса. Этот босс встречается в конце третьей локации: "Морская Машина"</p>
+	<hr>
+	<h2 id="section6">Другое</h2>
+			   <div class="container3">
+<img src="images/catbait/38.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>ДА КАК?</b> - Вы должны умереть 10 раз в любой локации.</p>
+</div>
+</div>
+ </div>
+    </div>
+</center>
+         </div>
+
+   <footer>
+<div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">© 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

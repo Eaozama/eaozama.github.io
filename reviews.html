@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="menu.css">
+	 <link rel="stylesheet" href="guides.css">
+	 <link rel="stylesheet" href="rev.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+		       <!-- Модальное окно для отображения изображения -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="guides.js"></script>
+	
+        <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="#">О нас</a>
+                    <a href="#">ЧаВо</a>
+                    <a href="#">Тех.поддержка</a>
+                </div>
+            </div>
+            <button class="menu-item">Регистрация</button>
+        </nav>
+    </header>
+	<div class="content">
+        <!-- Основной контент сайта -->
+
+ <h1 id="game-title"></h1>
+    <div id="reviews"></div>
+    <script src="rev.js"></script>
+	</div>
+    </div>
+</center>
+         </div>
+
+   <footer>
+        <div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="steam.png" alt="Steam"></a> <!-- Замените на пути к иконкам соц. сетей -->
+                <a href="#"><img src="youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="vk.png" alt="VK"></a>
+                <a href="#"><img src="yandex_logo.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">с 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

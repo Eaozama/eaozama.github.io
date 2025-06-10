@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"> <!-- Указываем кодировку документа -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Обеспечиваем адаптивность сайта для мобильных устройств -->
+    <title>Вход</title> <!-- Заголовок страницы -->
+    <link rel="stylesheet" href="reg.css"> <!-- Подключение внешнего CSS файла для оформления -->
+</head>
+<body>
+    <div class="container"> <!-- Основной контейнер для формы -->
+        <h1>Вход</h1> <!-- Заголовок формы входа -->
+        <!-- Форма входа, при отправке срабатывает JavaScript -->
+        <form id="loginForm">
+            <!-- Метка и поле для ввода email -->
+            <label for="email">Емейл:</label>
+            <input type="email" id="email" required>
+            <!-- Метка и поле для ввода пароля -->
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" required>
+            <!-- Кнопка отправки формы -->
+            <button type="submit">Войти</button>
+        </form>
+        <!-- Ссылка на страницу регистрации -->
+        <p>Нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
+    </div>
+<!-- Скрипт авторизации -->
+    <script>
+        // Обработчик события отправки формы
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращаем стандартное поведение формы (перезагрузку страницы)
+
+            // Получаем значения из полей
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Получаем из localStorage сохраненного пользователя
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+
+            // Проверяем, существует ли пользователь и совпадают ли email и пароль
+            if (storedUser && storedUser.email === email && storedUser.password === password) {
+                // Сохраняем имя пользователя в localStorage для использования на других страницах
+                localStorage.setItem('username', storedUser.username);
+                // Перенаправляем пользователя на главную страницу или другую
+                location.href = 'index.html';
+            } else {
+                // Если данные не совпадают, выводим сообщение об ошибке
+                alert('Неверный емейл или пароль!');
+            }
+        });
+    </script>
+</body>
+</html>

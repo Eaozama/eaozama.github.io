@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="menu.css">
+	 <link rel="stylesheet" href="guides.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+		       <!-- Модальное окно для отображения изображения -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="guides.js"></script>
+	
+               <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+			<button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+        </nav>
+    </header>
+		<div class="sidebar">
+            <h2>Содержание</h2>
+            <ul id="menu">
+                <li><a href="#section1">Духовный наставник</a></li>
+                <li><a href="#section2">Мастер Ветра</a></li>
+                <li><a href="#section3">Механик</a></li>
+				<li><a href="#section4">Дикарь</a></li>
+				<li><a href="#section5">Физик</a></li>
+            </ul>
+        </div>
+
+	<div class="content">
+        <!-- Основной контент сайта -->
+  <center><h1>Немного о скиллах</h1></center>
+<center>
+       <div class="country-descriptions">
+        <div class="main-block">
+<h3>Автор гайда: kirillyan в Steam</h3>
+<h2 id="section1">Духовный наставник</h2>
+             <div class="container3">
+			<p>Самая полезная ветка в игре. Рекомендую её прокачивать в самую первую очередь, так как она позволяет воскрешать мышей.
+Самый удачный билд: и пружинки, и ускорялки, и респавн, и даже облачко. Кстати, поподробнее об оных. Яблочко у нас создано для увеличения радиуса каста. Вокруг яблока появляется область, в которой можно кастовать что-либо. Присутствует во всех режимах. Облачко имеет качать лишь игрокам хардмода и дивайна, оно очень качественно стабилизирует крепления.
+</p>
+<img src="images/transformice/1.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 364px; max-height: 582px; min-width: 364px; min-height: 582px;">
+</div>
+<h2 id="section2">Мастер Ветра</h2>
+             <div class="container3">
+			<p>Расчитанная на подвижность шамана. Как в целом, так и во время каста.
+   Считаю это хорошим билдом, сочетающим быстроту, ловкость, маневренность. Все категории, прокачанные полность - обязательны. А оставшийся скиллпоинт можно вложить в любую категорию.</p>
+<img src="images/transformice/2.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 364px; max-height: 582px; min-width: 364px; min-height: 582px;">
+</div>
+<h2 id="section3">Механик</h2>
+             <div class="container3">
+			<p>Считаю эту ветку самой спецефичной из всех.
+   Её необходимо билдовать под свой стиль игры.  По идее, одна из самых в важных веток. Но, почему-то, хочется качать её в последнюю очередь.</p>
+<img src="images/transformice/3.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 364px; max-height: 582px; min-width: 364px; min-height: 582px;">
+</div>
+<h2 id="section4">Дикарь</h2>
+             <div class="container3">
+			<p>Не самая полезная ветка. Однако, есть хорошие элементы. А вообще - функция удаления всего накастованного тоже полезна, да и кот милый.
+Эволюция и рефлекс дают приличный буст скорости каста, особенно в бразильских комнатах.
+Перезагрузка навыков удваивает это и всё остальное.
+А вот трению и каменным ядрам там рядом даже делать нечего, мыши будут негодовать, не рекомендую.</p>
+<img src="images/transformice/4.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 364px; max-height: 582px; min-width: 364px; min-height: 582px;">
+</div>
+<h2 id="section5">Физик</h2>
+             <div class="container3">
+			<p>Относительная по полезности ветка, которая подкупает "колобками" и огромными планками, которые незаменимы в Дивайне.
+Весьма подкручиваемый билд, некоторые вещи можно выбирать на своё усмотрение.
+Настоятельно рекомендую прокачать мечту всех нубов ядро с полётом вверх, про большую балку уже говорил, вроде. Скотч тоже окажет свою помощь для любителей Дивайна, как и крюк.</p>
+<img src="images/transformice/5.jpg" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 364px; max-height: 582px; min-width: 364px; min-height: 582px;">
+</div>
+
+</div>
+ </div>
+    </div>
+</center>
+         </div>
+
+   <footer>
+<div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">© 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

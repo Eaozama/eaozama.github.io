@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="menu.css">
+	 <link rel="stylesheet" href="guides.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+		       <!-- Модальное окно для отображения изображения -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="guides.js"></script>
+	
+               <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+			<button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+        </nav>
+    </header>
+		<div class="sidebar">
+            <h2>Содержание</h2>
+            <ul id="menu">
+                <li><a href="#section1">Утречко!</a></li>
+                <li><a href="#section2">Бла-Бла-Бла</a></li>
+                <li><a href="#section3">Любовь к голубым бобам</a></li>
+				<li><a href="#section4">Шляпник</a></li>
+				<li><a href="#section5">А я тучи разгоню руками</a></li>
+				<li><a href="#section6">Создатель</a></li>
+				<li><a href="#section7">Чемпион среди улиток</a></li>
+            </ul>
+        </div>
+
+	<div class="content">
+        <!-- Основной контент сайта -->
+  <center><h1>Все эффекты в Yume Nikki</h1></center>
+<center>
+       <div class="country-descriptions">
+        <div class="main-block">
+<h3>Автор гайда: PixelHorrorWiki</h3>
+			<img src="images/yumenikki/0.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+
+<h2 id="section1">Лягушка</h2>
+            <div class="guide">
+			<img src="images/yumenikki/1.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> В воде Мадотсуки двигается с нормальной скоростью.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Мадотсуки подпрыгнет, словно лягушка.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> The Forest World или Dense Woods B (Frog Path), взаимодействие с лягушкой.</center></p>
+<p class="guide-text"><center><b>Применение:</b> На локациях The Pink Sea и Uboa's Trap Мадотсуки будет двигаться с нормальной скоростью, однако такой же эффект даёт "Bicycle".</center></p>
+</div>
+
+<h2 id="section2">Зонтик</h2>
+            <div class="guide">
+			<img src="images/yumenikki/2.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> До тех пор, пока Мадотсуки не отменит эффект, будет идти дождь, а активация под этим дождём эффекта "Demon" вызовет раскаты грома и молнии.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Мадотсуки вращает зонт.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Puddle World.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Потушить огонь в The Blazing Corridor (что так же может сделать и "Yuki-onna"), прекратить дождь в Dense Woods A.</center></p>
+</div>
+
+<h2 id="section3">Шапочка и шарф</h2>
+            <div class="guide">
+			<img src="images/yumenikki/3.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> В форме снеговика Мадотсуки не может ущипнуть себя и проснуться, так как не имеет рук.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Мадотсуки превращается в снеговика, если идёт снег.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Block World.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Взаимодействие с Мафурако в форме снеговика всегда будет возвращать к ней на обратном пути. В Blazing Corridor, если Мадотсуки встанет рядом с огнём, она начнёт медленно таять, пока не потеряет способность двигаться.</center></p>
+</div>
+
+<h2 id="section4">Юки-онна</h2>
+            <div class="guide">
+			<img src="images/yumenikki/5.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> До отмены эффекта будет идти снег.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b>  Snow World, взаимодействие с Юки-онной.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Потушить огонь в Blazing Corridor (что так же может сделать и "Umbrella"), прекратить снегопад в Snow World.</center></p>
+</div>
+ 
+ <h2 id="section5">Нож</h2>
+            <div class="guide">
+			<img src="images/yumenikki/6.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Персонажи, способные двигаться, будут в ужасе убегать прочь, а анимация статичных персонажей ускорется, показывая панику.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b>
+<ul>
+                <li>(1) Мадотсуки меняет руку, держащую нож.</li>
+                <li>(2) Ударяя ножом других персонажей, Мадотсуки убивает или ранит их. Некоторые персонажи и обекты странным образом реагируют на удары.</li>
+            </ul>
+</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Dark World, к северо-востоку от ворот в The Wilderness.</center></p>
+<p class="guide-text"><center><b>Применение:</b> <ul>
+                <li>Заставить персонажей, преграждающих путь, уйти</li>
+                <li>Взаимодействовать с окружением</li>
+				<li>Открывать новые локации</li>
+            </ul></center></p>
+</div>
+ 
+ <h2 id="section6">Ладонь с глазом</h2>
+            <div class="guide">
+			<img src="images/yumenikki/7.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> Мадотсуки сжимает ладонь и перемещается в Нексус.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Eyeball World, взаимодействие с Medamaude.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Можно использовать для быстрого возвращения в Нексус или побега из ловушек без необходимости просыпаться.</center></p>
+</div>
+
+<h2 id="section7">Пухляш</h2>
+            <div class="guide">
+			<img src="images/yumenikki/8.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> Живот Мадотсуки бурчит.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> The Docks, взаимодействие с Sotoburu.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Нет.</center></p>
+</div>
+
+<h2 id="section8">Коротышка</h2>
+            <div class="guide">
+			<img src="images/yumenikki/9.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Мадотсуки может проходить через очень маленькие места.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> <ul>
+                <li>(1) Мадотсуки создает коротышку, которая будет ходить следом за ней. Всего их может быть семь.</li>
+                <li>(3) Одна из которотышек взорвётся</li>
+            </ul></center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Candle World, поймать Гнома.</center></p>
+<p class="guide-text"><center><b>Применение:</b> <ul>
+                <li>Попасть в Stairwell из Mars</li>
+                <li>Попасть в Sewer Tunnel C из Sewer Tunnel B</li>
+            </ul></center></p>
+</div>
+
+<h2 id="section9">Флейта</h2>
+            <div class="guide">
+			<img src="images/yumenikki/10.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Мадостуки сыграет одну из нескольких коротких мелодий.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> The Music Room в локации the Mall.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Нет.</center></p>
+</div>
+ 
+ <h2 id="section10">Неон</h2>
+            <div class="guide">
+			<img src="images/yumenikki/11.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) При использовании окружение будет подсвечено одним из трёх случайных цветов — красным, синим, жёлтым и фиолетовым; последующее использование случайным образом изменит цвет.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Neon World, взаимодействие с Неоновым попугаем.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Нет.</center></p>
+</div>
+
+<h2 id="section11">Безликая</h2>
+            <div class="guide">
+			<img src="images/yumenikki/12.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Голова Мадотсуки отделяется от тела и начинает кружиться вокруг.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Processing Plant B в The Sewers, взаимодействие с безликим призраком.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Нет.</center></p>
+</div>
+
+<h2 id="section12">Голова</h2>
+            <div class="guide">
+			<img src="images/yumenikki/13.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> <ul>
+                <li>Высота и скорость Мадотсуки понижаются.</li>
+                <li>Мадотсуки не может ущипнуть себя и проснуться, так как не имеет рук.</li>
+            </ul></center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> The Guillotine World, рядом с the Bed Room, взаимодействие с Гильотиной.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Позволяет увидеть Closet Madotsuki в полную величину.</center></p>
+</div>
+
+<h2 id="section13">Полотенце</h2>
+            <div class="guide">
+			<img src="images/yumenikki/14.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Мадотсуки чихает.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> The Infinite Wilderness, взаимодействие с the Towel character.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Нет.</center></p>
+</div>
+
+<h2 id="section14">Кошка</h2>
+            <div class="guide">
+			<img src="images/yumenikki/15.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Мадотсуки поворачивается к игроку и, раскрыв большие красные глаза, мяукает; при этом её поза напоминает манэки-нэко.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Shield-folk World, взаимодействие с Nekoin.</center></p>
+<p class="guide-text"><center><b>Применение:</b> <ul>
+                <li>Притягивает персонажей: можно убрать их с дороги, не используя "Knife", или найти скрытых персонажей</li>
+                <li>Вызывать реакцию у некоторых персонажей</li>
+				<li>Вызвать НЛО (в некоторых локациях)</li>
+            </ul></center></p>
+</div>
+ 
+ <h2 id="section15">Лампа</h2>
+            <div class="guide">
+			<img src="images/yumenikki/16.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Видимость в тёмных локациях увеличена, если включена лампа.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Включить/вылючить лампу.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Lamp World, взаимодействие с Райто-окой.</center></p>
+<p class="guide-text"><center><b>Применение:</b> <ul>
+                <li>Ориентироваться в Dark World, Dark Woods и FC Dungeon.</li>
+                <li>В доме в The Wilderness.</li>
+            </ul></center></p>
+</div>
+
+<h2 id="section16">Велосипед</h2>
+            <div class="guide">
+			<img src="images/yumenikki/17.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Скорость Мадотсуки возрастает в два раза.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Мадотсуки звенит в звонок.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Graffiti Wolrd.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Позволяет намного быстрее перемещаться по миру снов, ловить быстрых персонажей и избегать безумных Людей-птиц.</center></p>
+</div>
+
+<h2 id="section17">Длинные волосы</h2>
+            <div class="guide">
+			<img src="images/yumenikki/18.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Мадотсуки садится.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Mural World, взаимодействие с Mouth Monster.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Нет.</center></p>
+</div>
+ 
+ <h2 id="section18">Волосы?...</h2>
+            <div class="guide">
+			<img src="images/yumenikki/19.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Появляется летающая вокруг и жужжащая муха.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b>  The Storage Room, Underground World, взаимодействие с Mouth Monster.</center></p>
+<p class="guide-text"><center><b>Применение:</b> На короткое время можно отмечать места.</center></p>
+</div>
+
+<h2 id="section19">Блондинка</h2>
+            <div class="guide">
+			<img src="images/yumenikki/20.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Мадотсуки сядет.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Mural World, взаимодействие со светловолосым Mouth Monster.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Нет.</center></p>
+</div>
+
+<h2 id="section20">Платок</h2>
+            <div class="guide">
+			<img src="images/yumenikki/21.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Мадотсуки невидима для персонажей в призрачной форме.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Мадотсуки превращается в призрака и становится полупрозрачной.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Ghost World, взаимодействие с Fleebie.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Позволяет избежать безумных Людей-птиц (если, конечно, Мадотсуки не попытается с ними взаимодействовать).</center></p>
+</div>
+
+<h2 id="section21">Ведьма</h2>
+            <div class="guide">
+			<img src="images/yumenikki/22.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Мадотсуки парит на небольшом расстоянии над землёй</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> The Witch's island, взаимодействие с Кимаджо.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Можно использовать для полёта над крышей локации Mall; нажатие на Z вернёт Мадотсуки на крышу, а нажатие на единицу — удалит метлу, заставив девочку упасть с кровати и проснуться.</center></p>
+</div>
+ 
+ <h2 id="section22">Светофор</h2>
+            <div class="guide">
+			<img src="images/yumenikki/23.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Мадотсуки не может ущипнуть себя и проснуться, так как не имеет рук.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Меняяет огни светофора между красным и зелёным.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> Dense Woods B (The Road), взаимодействие с Ситай-саном.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Красный свет влияет на неигровых персонажей, все персонажи замирают на месте.</center></p>
+</div>
+
+<h2 id="section23">Демон</h2>
+            <div class="guide">
+			<img src="images/yumenikki/24.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Во время дождя можно вызвать гром с молнией. Во время снегопада — толко гром.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b> FC Demon Room, взаимодействие с Demon.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Можно использовать, чтобы призвать Demon в FC Overworld B, который переместит Мадотсуки в Demon Room.</center></p>
+</div>
+
+<h2 id="section24">Желе</h2>
+            <div class="guide">
+			<img src="images/yumenikki/25.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+<p class="guide-text"><center><b>Пассивный эффект:</b> Нет.</center></p>
+<p class="guide-text"><center><b>Активный эффект:</b> (1) Мадотсуки качается вверх-вниз.</center></p>
+<p class="guide-text"><center><b>Местонахождение:</b>  FC World Sea Cliffs, взаимодействие с Buyo Buyo в FC Overworld.</center></p>
+<p class="guide-text"><center><b>Применение:</b> Нет.</center></p>
+</div>
+ 
+</div>
+</div>
+ </div>
+    </div>
+</center>
+         </div>
+
+   <footer>
+<div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">© 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

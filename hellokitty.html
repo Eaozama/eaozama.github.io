@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="menu.css">
+	 <link rel="stylesheet" href="guides.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+		       <!-- Модальное окно для отображения изображения -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="guides.js"></script>
+	
+               <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+			<button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+        </nav>
+    </header>
+		<div class="sidebar">
+            <h2>Содержание</h2>
+            <ul id="menu">
+                <li><a href="#section1">Оглавление</a></li>
+				<li><a href="#section2">Радуждные шарики</a></li>
+				<li><a href="#section3">Зеленые шарики</a></li>
+				<li><a href="#section4">Синие шарики</a></li>
+				<li><a href="#section5">Фиолетовые шарики</a></li>
+				<li><a href="#section6">Тепло-розовые шарики</a></li>
+				<li><a href="#section7">Фисташковые шарики</a></li>
+				<li><a href="#section8">Голубые шарики</a></li>
+				<li><a href="#section9">Сиреневые шарики</a></li>
+				<li><a href="#section10">Желтые шарики</a></li>
+				<li><a href="#section11">Золотые шарики</a></li>
+				<li><a href="#section12">Оранжевые шарики</a></li>
+				<li><a href="#section13">Пастельные металликом</a></li>
+				<li><a href="#section14">Красные шарики</a></li>
+				<li><a href="#section15">Черные шарики</a></li>
+				<li><a href="#section16">Металлические радужные</a></li>
+				<li><a href="#section17">Серебряные шарики</a></li>
+				<li><a href="#section18">Пломбирные шарики</a></li>
+				<li><a href="#section19">Белые шарики</a></li>
+				<li><a href="#section20">Пастельные шарики</a></li>
+				<li><a href="#section21">Розовато-красные шарики</a></li>
+            </ul>
+        </div>
+
+	<div class="content">
+        <!-- Основной контент сайта -->
+  <center><h1>Поиск воздушных шариков 20/20</h1></center>
+<center>
+       <div class="country-descriptions">
+        <div class="main-block">
+<h3>Автор гайда: obi в Steam</h3>
+
+<h2 id="section1">Оглавление</h2>
+            <div class="container3">
+	<p><b>Для тех, кто не понимает о чем речь расскажу вкратце:</b></p>
+	<p>После выполнения ряда заданий со спасением островов нам выдают новое, связанное с ЦИЛИНДРОМ, где мы должны спасти его давнего друга Биг Челенджеса, после этого открывается квест, (возможно нужно повышение уровня Такедо Сэма), в течении которого мы наблюдаем прыжок Биг Челенджеса с горы, с шариками другого цвета, после этого нам открывается возможность поиска других воздушных шариков для нашего персонажа, в этом гайде я буду показывать местонахождение этих сундуков и, возможно, объяснение их геопозиции.
+</p>
+</div>
+
+<h2 id="section2">Радужные шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/1.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+	<p>Дают изначально при входе в игру</p>
+</div>
+ <h2 id="section3">Зеленые шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/2.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+	<p>Дают после выполнения квеста с Биг Челенджесом</p>
+</div>
+ <h2 id="section4">Синие шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/3.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находится на локации "Морской курорт", на месте нахождения первого Гудетамы в цилиндре, левее от Лунного острова</p>
+</div>
+<h2 id="section5">Фиолетовые шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/4.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находятся на локации "Морской курорт", под водой у моста к гостевым домам</p>
+</div>
+<h2 id="section6">Тепло-розовые шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/5.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находится на локации "Радужный риф", правее от точки тп "Затонувший корабль", в подземелье самого корабля, после повторного прохождения</p>
+</div>
+<h2 id="section7">Фисташковые шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/6.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находится на локации "Жуткое болото", за загадочным домиком из квеста с Куроми</p>
+</div>
+<h2 id="section8">Голубые шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/7.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находится на локации "Жуткое болото" с края карты, на песке</p>
+</div>
+<h2 id="section9">Сиреневые шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/8.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+			<img src="images/hellokitty/9.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находятся на локации "Жуткое болото", нужно повторно зайти в жуткий дом, в комнату под номером 5, левее находится механизм, чтоб активировать дверь, за дверью, порядок активации на картинке</p>
+</div>
+<h2 id="section10">Желтые шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/10.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находится на локации "Самоцветная гора", правее от точки тп "Оазис", на выступе</p>
+</div>
+<h2 id="section11">Золотые шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/11.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находятся на локации "Самоцветная гора", под водой у кафе Помпомрина</p>
+</div>
+<h2 id="section12">Оранжевые шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/12.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находятся на локации "Самоцветная гора", на одной из вершин камней, с края карты</p>
+</div>
+<h2 id="section13">Пастельные металликом</h2>
+            <div class="container3">
+			<img src="images/hellokitty/13.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находится на локации "Самоцветная гора", в шахте с розовыми камнями</p>
+</div>
+<h2 id="section14">Красные шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/14.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находится на локации "Взрывная гора", на выступе</p>
+</div>
+<h2 id="section15">Черные шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/15.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+			<img src="images/hellokitty/16.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находятся на локации "Взрывная гора", спускаемся ниже от точки тп "Вход в верхние руины", заходим в дверь посередине, проходим через исчезающие квадратики, заходим в дверь, летим правее, на выступе</p>
+</div>
+<h2 id="section16">Металлические радужные</h2>
+            <div class="container3">
+			<img src="images/hellokitty/17.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+			<img src="images/hellokitty/18.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находятся на локации "Взрывная гора", левее точки тп "Взрывная гора", заходим в подземелье, катимся по шахте, в следующей комнате идем в проход в следующую комнату, идем к выходу, справа от выхода сундук</p>
+</div>
+<h2 id="section17">Серебряные шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/19.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находится на локации "Взрывная гора",правее от точки тп "Вход в верхние руины", заходим в первую от тп дверь, проезжаем на вагонетке до конца и забираем сундук</p>
+</div>
+<h2 id="section18">Пломбирные шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/20.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находятся на локации "Ледяная вершина" на небольшом выступе справа</p>
+</div>
+<h2 id="section19">Белые шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/21.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находятся на локации "Ледяная гора", прогулявшись и осмотрев все тоннели, зайти в тот, что показан на карте, на выпуклости</p>
+</div>
+<h2 id="section20">Пастельные  шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/22.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находятся на локации "Веселый луг", в воде под мостом</p>
+</div>
+<h2 id="section21">Розовато-красные шарики</h2>
+            <div class="container3">
+			<img src="images/hellokitty/23.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 400px; max-height: 400px; min-width: 100px; min-height: 100px;">
+	<p>Находятся на 3 ярусе локации "Веселый луг"</p>
+</div>
+</div>
+</div>
+ </div>
+    </div>
+</center>
+         </div>
+
+   <footer>
+<div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">© 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

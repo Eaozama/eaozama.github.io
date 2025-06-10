@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Подключение внешних таблиц стилей -->
+    <link rel="stylesheet" href="styles.css">
+		 <link rel="stylesheet" href="support.css">
+		 <link rel="stylesheet" href="team.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+<header>
+
+         <!-- Логотип и название сайта -->
+        <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <!-- Навигационное меню -->
+        <nav class="menu">
+            <!-- Кнопки перехода на разные страницы -->
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <!-- Выпадающее меню помощи -->
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+            <!-- Кнопка авторизации или выхода -->
+            <button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+            <!-- Скрипт для управления авторизацией -->
+            <script>
+                // Функция проверки статуса авторизации пользователя
+                function checkAuth() {
+                    const username = localStorage.getItem('username'); // Получение имени пользователя из хранилища
+                    const authButton = document.getElementById('authButton'); // Кнопка авторизации/выхода
+                    if (username) {
+                        // Если пользователь авторизован, отображаем кнопку выхода
+                        authButton.innerText = "Выйти";
+                        authButton.onclick = logout;
+                    } else {
+                        // Если пользователь не авторизован, перенаправляем на страницу входа
+                        location.href = 'login.html';
+                    }
+                }
+                // Функция выхода из аккаунта
+                function logout() {
+                    localStorage.removeItem('username'); // Удаление имени пользователя из хранилища
+                    location.href = 'login.html'; // Перенаправление на страницу входа
+                }
+                // Проверка статуса авторизации после загрузки документа
+                document.addEventListener('DOMContentLoaded', checkAuth);
+            </script>
+        </nav>
+    </header>
+<!-- Контейнер для раздела FAQ -->
+<div class="containerfaq">
+  <!-- Контейнер с кнопками навигации по разделам -->
+  <div class="button-container2">
+     <!-- Кнопка для раздела часто задаваемых вопросов -->
+     <a href="chavo.html" class="button">ЧаВо</a>
+     <!-- Активная кнопка для раздела "О команде" -->
+     <a href="about.html" class="button active">О команде</a>
+     <!-- Кнопка для раздела технической поддержки -->
+     <a href="support.html" class="button">Тех.поддержка</a>
+  </div>
+
+  <!-- Контейнер для отображения информации о команде -->
+  <div class="team-container">
+        <!-- Карточка участника команды -->
+        <div class="team-member">
+            <!-- Аватар участника -->
+            <img src="images/profile_image/1.jpg" alt="Аватар 1" class="avatar">
+            <!-- Информация о участнике -->
+            <div class="member-info">
+                <h3>GameMasterAlex</h3> <!-- Имя участника -->
+                <p class="position">Главный редактор</p> <!-- Должность -->
+                <!-- Описание достижений и опыта -->
+                <p class="achievements">Более 10 лет опыта в игровую индустрию, автор 5 бестселлеров о видеоиграх и лауреат премии "Лучший гейм-дизайнер" на фестивале GameOn.</p>
+            </div>
+        </div>
+
+        <!-- Карточка следующего участника -->
+        <div class="team-member">
+            <img src="images/profile_image/2.jpg" alt="Аватар 2" class="avatar">
+            <div class="member-info">
+                <h3>CasualQueen</h3>
+                <p class="position">Контент-менеджер</p>
+                <p class="achievements">Создание статей и обзоров на казуальные игры, регулярный участник конференций разработчиков, обладатель награды за лучшее руководство по игровым стратегиям.</p>
+            </div>
+        </div>
+
+        <!-- Карточка следующего участника -->
+        <div class="team-member">
+            <img src="images/profile_image/3.jpg" alt="Аватар 3" class="avatar">
+            <div class="member-info">
+                <h3>PixelPioneer</h3>
+                <p class="position">Аналитик игр</p>
+                <p class="achievements">Провела более 100 исследований по игровым трендам, ее аналитические статьи стали обязательными для прочтения среди разработчиков.</p>
+            </div>
+        </div>
+
+        <!-- Карточка следующего участника -->
+        <div class="team-member">
+            <img src="images/profile_image/6.jpg" alt="Аватар 4" class="avatar">
+            <div class="member-info">
+                <h3>PlayfulPaul</h3>
+                <p class="position">Куратор сообщества</p>
+                <p class="achievements">Построила одно из самых активных сообществ для казуальных игроков, организовала более 50 онлайн-турниров и встреч, вдохновив игроков по всему миру на совместную игру.</p>
+            </div>
+        </div>
+
+        <!-- Карточка следующего участника -->
+        <div class="team-member">
+            <img src="images/profile_image/5.jpg" alt="Аватар 5" class="avatar">
+            <div class="member-info">
+                <h3>RadicalHero</h3>
+                <p class="position">Программист</p>
+                <p class="achievements">Реализовал автоматизированную систему управления контентом, позволяющую ускорить процесс обновления игр и статей на сайте на 60%, что привело к значительному увеличению активности пользователей и времени, проведенного на платформе.</p>
+            </div>
+        </div>
+
+        <!-- Карточка следующего участника -->
+        <div class="team-member">
+            <img src="images/profile_image/4.jpg" alt="Аватар 6" class="avatar">
+            <div class="member-info">
+                <h3>EmberPanda</h3>
+                <p class="position">Редактор контента</p>
+                <p class="achievements">Обеспечил качество и точность статей о казуальных играх, повысив популярность сайта и заработав репутацию надежного источника информации.</p>
+            </div>
+        </div>
+		
+		    <!-- Карточка следующего участника -->
+		<div class="team-member">
+            <img src="images/profile_image/7.jpg" alt="Аватар 7" class="avatar">
+            <div class="member-info">
+                <h3>PlayfulPuncher</h3>
+                <p class="position">Локализатор</p>
+                <p class="achievements">Перевела и адаптировала успешные казуальные игры на русский язык, обеспечивая доступность контента для русскоязычной аудитории и помощь в расширении рынка.</p>
+            </div>
+        </div>
+    </div>
+	</div>
+
+   <footer>
+        <div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">© 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>

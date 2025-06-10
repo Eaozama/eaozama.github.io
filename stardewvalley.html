@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="menu.css">
+	 <link rel="stylesheet" href="guides.css">
+    <title>PlayWithEasy</title>
+</head>
+<body>
+    <header>
+		       <!-- Модальное окно для отображения изображения -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="guides.js"></script>
+	
+               <div class="logo">
+            <img src="images\logo.png" alt="Икона" class="icon">
+            <h1>PlayWithEasy</h1>
+        </div>
+        <nav class="menu">
+            <button class="menu-item" onclick="location.href='index.html';">Главная</button>
+            <button class="menu-item" onclick="location.href='games.html';">Каталог игр</button>
+            <div class="dropdown">
+                <button class="menu-item dropdown-btn">Помощь</button>
+                <div class="dropdown-content">
+                    <a href="about.html">О нас</a>
+                    <a href="chavo.html">ЧаВо</a>
+                    <a href="support.html">Тех.поддержка</a>
+                </div>
+            </div>
+			<button id="authButton" onclick="checkAuth()" class="menu-item"></button>
+<script>
+        function checkAuth() {
+            const username = localStorage.getItem('username');
+            const authButton = document.getElementById('authButton');
+            if (username) {
+                authButton.innerText = "Выйти";
+                authButton.onclick = logout;
+            } else {
+                location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            location.href = 'login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+        </nav>
+    </header>
+		<div class="sidebar">
+            <h2>Содержание</h2>
+            <ul id="menu">
+                <li><a href="#section1">Весенние культуры</a></li>
+                <li><a href="#section2">Летние культуры</a></li>
+                <li><a href="#section3">Осенние культуры</a></li>
+				<li><a href="#section4">Прочее</a></li>
+            </ul>
+        </div>
+
+	<div class="content">
+        <!-- Основной контент сайта -->
+  <center><h1>Выгодные культуры</h1></center>
+<center>
+       <div class="country-descriptions">
+        <div class="main-block">
+<h3>Автор гайда: obi в Steam</h3>
+<h2 id="section1">Весенние культуры</h2>
+            <div class="container3">
+			<img src="images/stardewvalley/1.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Клубника</b></p>
+	<p>Покупается на яичном фестивале за 100g</p>
+<p>Прибыль за месяц: 500g</p>
+<p>Растёт: 8 дней (после производит урожай каждые 4 дня)</p>
+</div>
+ <div class="container3">
+ <img src="images/stardewvalley/2.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+    <p><b>Ревень</b></p>
+	<p>Покупается в пустыне Оазис за 100g</p>
+<p>Прибыль за месяц: 240g</p>
+<p>Растёт: 13 дней</p>
+</div>
+ <div class="container3">
+<img src="images/stardewvalley/3.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+        <p><b>Картофель</b></p>
+	<p>Покупается в магазине Пьера за 50g</p>
+<p>Прибыль за месяц: 210g</p>
+<p>Растёт: 6 дней</p>
+</div>
+ <div class="container3">
+<img src="images/stardewvalley/4.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+           <p><b>Цветная капуста</b></p>
+	<p>Покупается в магазине Пьера за 80g</p>
+<p>Прибыль за месяц: 190g</p>
+<p>Растёт: 12 дней</p>
+</div>
+<hr>
+<h2 id="section2">Летние культуры</h2>
+			   <div class="container3">
+<img src="images/stardewvalley/5.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+           <p><b>Черника</b></p>
+	<p>Покупается в магазине Пьера за 80g</p>
+<p>Прибыль за месяц: 880g</p>
+<p>Растёт: 13 дней (после производит урожай каждые 4 дня)</p>
+</div>
+ <div class="container3">
+<img src="images/stardewvalley/6.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+               <p><b>Карамбола</b></p>
+	<p>Покупается в пустыне Оазис за 400g</p>
+<p>Прибыль за месяц: 880g</p>
+<p>Растёт: 13 дней</p>
+</div>
+ <div class="container3">
+<img src="images/stardewvalley/7.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+                   <p><b>Хмель</b></p>
+	<p>Покупается в магазине Пьера за 60g</p>
+<p>Прибыль за месяц: 365g</p>
+<p>Растёт: 11 дней</p>
+</div>
+ <div class="container3">
+<img src="images/stardewvalley/8.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+                       <p><b>Дыня</b></p>
+	<p>Покупается в магазине Пьера за 80g</p>
+<p>Прибыль за месяц: 340g</p>
+<p>Растёт: 12 дней</p>
+</div>
+<hr>
+<h2 id="section3">Осенние культуры</h2>
+ <div class="container3">
+<img src="images/stardewvalley/9.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+                           <p><b>Сладкая ягода</b></p>
+	<p>Покупаются у странствующего торговца за 1000g</p>
+<p>Прибыль за месяц: 2000g</p>
+<p>Растёт: 24 дня</p>
+</div>
+ <div class="container3">
+<img src="images/stardewvalley/10.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+                              <p><b>Клюква</b></p>
+	<p>Покупается в магазине Пьера за 240g</p>
+<p>Прибыль за месяц: 1100g</p>
+<p>Растёт: 7 дней (после производит урожай каждые 5 дней)</p>
+</div>
+ <div class="container3">
+<img src="images/stardewvalley/11.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+                                  <p><b>Тыква</b></p>
+	<p>Покупается в магазине Пьера за 100g</p>
+<p>Прибыль за месяц: 440g</p>
+<p>Растёт: 13 дней</p>
+</div>
+ <div class="container3">
+<img src="images/stardewvalley/12.png" alt="Гайд по игре" class="guide-image" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;">
+                                       <p><b>Виноград</b></p>
+	<p>Покупается в магазине Пьера за 60g</p>
+<p>Прибыль за месяц: 420g</p>
+<h2 id="section4">Прочее</h2>
+ <div class="container3">
+	<p>Чтобы получить большую прибыль можно использовать бочки для вина или кадки.</p>
+<p>Вся прибыль за месяц указана без учёта профессий.</p>
+<p>В игре существует также довольно прибыльная культура - древний плод. Но её семена сложно получить, поэтому она не была указана здесь.</p>
+</div>
+
+</div>
+</div>
+ </div>
+    </div>
+</center>
+         </div>
+
+   <footer>
+<div class="footer-top">
+            <div>
+                <img src="images\logo.png" alt="Иконка сайта"> <!-- Замените на путь к вашей иконке -->
+            <span>PlayWithEasy</span>
+                <div>Говорим на языке казуальных игр!</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/vk.png" alt="VK"></a>
+                <a href="#"><img src="images/dzen.png" alt="Яндекс.Дзен"></a>
+                <a href="#"><img src="images/discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">Вопросы и ответы Команда PlayWithEasy О проекте</div>
+            <div class="footer-links">Помощь по сайту Обратная связь Соглашение о пользовании</div>
+        </div>
+		<div class="footer-credits">© 2024-2025 PlayWithEasy.ru</div>
+    </footer>
+</body>
+</html>
