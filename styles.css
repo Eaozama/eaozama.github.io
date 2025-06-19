@@ -355,7 +355,7 @@ h1 {
 .chibi {
     position: fixed;
     bottom: 5px;
-    right: 2px;
+    right: 35px;
     cursor: pointer;
     z-index: 1000;
 }
@@ -363,21 +363,6 @@ h1 {
 .chibi img {
     width: 120px; /* размер мини-чибика */
 }
-    
-    .popup {
-        width: 40%; /* Увеличиваем ширину popup на меньших экранах */
-        max-width: 50px; /* Ограничиваем максимальную ширину */
-    }
-    
-    .popup p {
-        font-size: 4px; /* Уменьшаем размер шрифта до 12px для более мелких экранов */
-    }
-
-    .popup a,
-    .popup button {
-        font-size: 4px; /* Уменьшаем размер шрифта для кнопок */
-        padding: 2px 5px; /* Уменьшаем внутренние отступы для кнопок */
-    }
 	.container11 {
     display: flex;
     justify-content: center; /* Центрирование содержимого по горизонтали */

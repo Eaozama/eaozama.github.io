@@ -10,38 +10,6 @@
 </head>
 <body>
 <header>
-<!-- Контейнер с изображением мини-Чиби, при клике вызывается функция showPopup -->
-<div id="chibi" class="chibi" onclick="showPopup()">
-    <img src="images/чибик.png" alt="Мини-Чиби">
-</div>
-
-<!-- Всплывающее окно с вопросом и двумя вариантами ответа -->
-<div id="popup" class="popup" style="display: none;">
-    <p>Посетить нашего телеграм-бота?</p>
-    <!-- Ссылка на телеграм-бота, при клике вызывается hidePopup с параметром 'yes' и открывается в новой вкладке -->
-    <a href="https://t.me/PlayWithEasy_bot" target="_blank" onclick="hidePopup('yes')">Посетить</a>
-    <!-- Кнопка "Нет", при клике вызывает hidePopup с параметром 'no' -->
-    <button onclick="hidePopup('no')">Нет</button>
-</div>
-
-<script>
-    // Показывает всплывающее окно и скрывает иконку мини-чиби
-    function showPopup() {
-        document.getElementById('popup').style.display = 'block';      // Показать всплывающее окно
-        document.getElementById('chibi').style.display = 'none';      // Скрыть мини-чиби
-    }
-
-    // Скрывает всплывающее окно, параметр answer позволяет обработать ответ пользователя
-    function hidePopup(answer) {
-        if (answer === 'no') {
-            // Здесь можно добавить логику, если пользователь ответил "Нет"
-            // Например, вернуть обратно иконку мини-чиби:
-            document.getElementById('chibi').style.display = 'block'; // Показать мини-чиби снова
-        }
-        // Скрыть всплывающее окно
-        document.getElementById('popup').style.display = 'none';
-    }
-</script>
 
 	        <!-- Логотип и название сайта -->
         <div class="logo">
@@ -88,6 +56,38 @@
                 document.addEventListener('DOMContentLoaded', checkAuth);
             </script>
         </nav>
+		<!-- Контейнер с изображением мини-Чиби, при клике вызывается функция showPopup -->
+<div id="chibi" class="chibi" onclick="showPopup()">
+    <img src="images/чибик.png" alt="Мини-Чиби">
+</div>
+
+<!-- Всплывающее окно с вопросом и двумя вариантами ответа -->
+<div id="popup" class="popup" style="display: none;">
+    <p>Посетить нашего телеграм-бота?</p>
+    <!-- Ссылка на телеграм-бота, при клике вызывается hidePopup с параметром 'yes' и открывается в новой вкладке -->
+    <a href="https://t.me/PlayWithEasy_bot" target="_blank" onclick="hidePopup('yes')">Посетить</a>
+    <!-- Кнопка "Нет", при клике вызывает hidePopup с параметром 'no' -->
+    <button onclick="hidePopup('no')">Нет</button>
+</div>
+
+<script>
+    // Показывает всплывающее окно и скрывает иконку мини-чиби
+    function showPopup() {
+        document.getElementById('popup').style.display = 'block';      // Показать всплывающее окно
+        document.getElementById('chibi').style.display = 'none';      // Скрыть мини-чиби
+    }
+
+    // Скрывает всплывающее окно, параметр answer позволяет обработать ответ пользователя
+    function hidePopup(answer) {
+        if (answer === 'no') {
+            // Здесь можно добавить логику, если пользователь ответил "Нет"
+            // Например, вернуть обратно иконку мини-чиби:
+            document.getElementById('chibi').style.display = 'block'; // Показать мини-чиби снова
+        }
+        // Скрыть всплывающее окно
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
     </header>
 <!-- Контейнер для раздела FAQ -->
 	    <div class="containerfaq">
