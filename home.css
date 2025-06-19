@@ -45,12 +45,20 @@ p {
     padding: 20px;
 }
 
+.image-block {
+    display: flex; /* Используем flexbox для размещения блоков в строку */
+    flex-wrap: wrap; /* Позволяет блокам переноситься на новую строку при недостатке места */
+    justify-content: space-between; /* Выравнивание блоков с промежутками */
+}
+
 .text-block {
     background-color: #183e4b;
     padding: 20px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    flex: 1 1 calc(30% - 20px); /* Устанавливаем ширину блоков */
+    max-width: calc(30% - 20px); /* Максимальная ширина блоков */
 }
 
 .btn {
