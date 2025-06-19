@@ -481,4 +481,11 @@ h1 {
         font-size: 12px; /* Уменьшаем размер шрифта для кнопок */
         padding: 7px 12px; /* Уменьшаем внутренние отступы для кнопок */
     }
+	.container5 {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
 }
