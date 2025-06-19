@@ -498,7 +498,7 @@ a {
     }
 	.video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Соотношение 16:9 */
+    padding-bottom: 70.25%; /* Соотношение 16:9 */
     height: 0;
 }
 .container {
