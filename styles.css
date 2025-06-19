@@ -411,6 +411,6 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s;
 	font-family: Arial, sans-serif; /* Установка шрифта Arial */
-    font-size: 15px; /* Добавьте для управления размером шрифта */
+    font-size: 10px; /* Добавьте для управления размером шрифта */
 }
 }
