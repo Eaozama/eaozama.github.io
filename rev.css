@@ -16,17 +16,10 @@ a {
     height: auto; /* Устанавливает высоту авто для адаптивности */
 }
 
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 1024px) {
 iframe,
 video {
-    width: 100%; /* Сделайте ширину iframe или video равной 100% */
-    height: auto; /* Установите высоту на автоматическую */
-}
-}
-@media (max-width: 480px) {
-iframe,
-video {
-    width: 100%; /* Сделайте ширину iframe или video равной 100% */
+    width: 50%; /* Сделайте ширину iframe или video равной 100% */
     height: auto; /* Установите высоту на автоматическую */
 }
 }
