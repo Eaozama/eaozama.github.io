@@ -84,3 +84,26 @@
     padding: 10px 20px;
     height: 150px;
 }
+@media (min-width: 320px) and (max-width: 812px) {
+	.guide-title {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.guide-text {
+    text-align: left;
+    font-size: 10px;
+    line-height: 1.5; /* Увеличивает пространство между строками */
+	margin-bottom: 5px;
+}
+.guide ul {
+    padding-left: 10px; /* Отступ слева для списка */
+    list-style-type: disc; /* Тип маркера списка (можно выбрать другие варианты) */
+    text-align: left; /* Выравнивание текста списка по левому краю */
+}
+
+.guide ul li {
+	font-size: 10px;
+    line-height: 1.5; /* Увеличиваем пространство между строками в списке */
+}
+}
