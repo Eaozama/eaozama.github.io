@@ -53,27 +53,8 @@
     color: #000; /* Цвет активной ссылки */
     background-color: #c0c0c0; /* Цвет фона активной ссылки */
 }
-@media (min-width: 768px) {
-    .content {
-        width: 70%;
-    }
 
-    .sidebar {
-        position: fixed;
-        width: 25%;
-        top: 240px; 
-        right: 0;
-        border-left: 1px solid #ccc;
-        height: calc(100% - 240px); /* Устанавливаем высоту сайдбара */
-        overflow-y: auto; /* Делаем сайдбар прокручиваемым */
-    }
-    
-    .content {
-        padding: 20px; /* Немного больший отступ для десктопа */
-    }
-}
-
-@media (min-width: 480px) {
+@media (min-width: 320px) and (max-width: 1024px) {
     .content {
         width: 70%;
     }
