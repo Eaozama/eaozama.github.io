@@ -361,7 +361,7 @@ h1 {
 }
 
 .chibi img {
-    width: 20px; /* размер мини-чибика */
+    width: 120px; /* размер мини-чибика */
 }
     
     .popup {
@@ -401,7 +401,9 @@ h1 {
     font-size: 15px;
     margin-bottom: 5px;
 }
-
+.h2 {
+    font-size: 12px;
+}
     .logo {
         gap: 10px; /* Увеличьте расстояние между логотипом и текстом */
     }
@@ -462,9 +464,10 @@ h1 {
 .container2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
     padding: 5px;
 	font-family: Arial, sans-serif;
+	font-size: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
