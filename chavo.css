@@ -61,7 +61,6 @@ h2 {
 
 .button {
     text-decoration: none;
-	
     color: black; /* Цвет текста */
     padding: 10px 20px; /* Отступы внутри кнопки */
     border: 2px solid transparent; /* Базовая рамка */
@@ -82,4 +81,19 @@ h2 {
 /* Логика активной страницы */
 .button.active {
     border-bottom: 2px solid red; /* Подчёркивание красным цветом */
+}
+@media (min-width: 320px) and (max-width: 812px) {
+	.button-container2 {
+    display: flex;
+    gap: 2px; /* Отступы между кнопками */
+}
+
+.button {
+    text-decoration: none;
+    color: black; /* Цвет текста */
+    padding: 10px 10px; /* Отступы внутри кнопки */
+    border: 2px solid transparent; /* Базовая рамка */
+    position: relative; /* Для псевдоэлемента */
+    transition: color 0.3s, border-color 0.3s; /* Плавный переход */
+}
 }
