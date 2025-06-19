@@ -354,7 +354,7 @@ h1 {
 }
 @media (min-width: 320px) and (max-width: 1024px) {
     .chibi img {
-        width: 200px; /* Еще больше уменьшаем размер для очень маленьких экранов */
+        width: 60px; /* Еще больше уменьшаем размер для очень маленьких экранов */
     }
     
     .popup {
@@ -386,5 +386,31 @@ h1 {
     border-radius: 8px; /* Скругление углов блока */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для блока */
     opacity: 0.95; /* Небольшая прозрачность */
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon {
+    width: 30; /* Размер иконки */
+    height: 30px; /* Размер иконки */
+}
+
+.menu {
+    display: flex;
+    gap: 10px; /* Отступ между элементами меню */
+}
+
+.menu-item {
+    background-color: #0f232a;
+    border: none;
+    color: #eaeaea;
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+	font-family: Arial, sans-serif; /* Установка шрифта Arial */
+    font-size: 15px; /* Добавьте для управления размером шрифта */
 }
 }
