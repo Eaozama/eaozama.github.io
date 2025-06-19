@@ -391,11 +391,13 @@ h1 {
     display: flex;
     align-items: center;
     gap: 5px;
+	    width: 20px; /* Размер иконки */
+    height: 20px; /* Размер иконки */
 }
 
 .icon {
-    width: 30; /* Размер иконки */
-    height: 30px; /* Размер иконки */
+    width: 15px; /* Размер иконки */
+    height: 15px; /* Размер иконки */
 }
 
 .menu {
