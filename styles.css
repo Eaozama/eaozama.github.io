@@ -352,31 +352,76 @@ h1 {
 }
 
 
-/* Медиа-запрос для мобильных устройств */
-/* Медиа-запросы для адаптации под мобильные устройства */
-@media (max-width: 768px) {
-    .menu {
-        flex-direction: column; /* Подача меню в столбик */
-        gap: 10px; /* Отступ между элементами меню */
-        align-items: center; /* Центрирование элементов */
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 480px) { /* Для маленьких экранов, смартфоны */
+    .menu-item {
+        font-size: 14px; /* Размер шрифта для мобильных */
+        padding: 8px 10px; /* Отступы для мобильных */
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-top img {
+        height: 20px;
+    }
+
+    footer {
+        padding: 15px; /* Уменьшение отступов */
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) { /* Для средних экранов, смартфоны и маленькие планшеты */
+    header {
+        padding: 15px;
     }
 
     .menu-item {
-        font-size: 15px; /* Уменьшение размера шрифта для мобильных */
-        padding: 8px 10px; /* Уменьшения отступов */
+        font-size: 15px; /* Размер шрифта для средних устройств */
+        padding: 8px 12px; /* Отступы для средних устройств */
     }
 
-    .footer-top {
-        flex-direction: column; /* Подача в столбик для подвала */
-        align-items: flex-start; /* Выравнивание по левому краю */
+    .icon {
+        width: 40px;
+        height: 40px;
     }
 
-    .social-icons {
-        justify-content: center; /* Центрирование иконок */
+    .footer-top img {
+        height: 22px;
     }
 
-    .container {
-        flex-direction: column; /* Подача содержимого в столбик */
-        padding: 20px; /* Добавление отступов в содержимом */
+    footer {
+        padding: 18px; /* Уменьшение отступов */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Для крупных планшетов */
+    header {
+        padding: 20px;
+    }
+
+    .menu-item {
+        font-size: 16px; /* Размер шрифта для планшетов */
+        padding: 10px 15px; /* Отступы */
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-top img {
+        height: 25px;
+    }
+
+    footer {
+        padding: 20px; /* Уменьшение отступов */
     }
 }
