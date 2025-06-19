@@ -356,25 +356,25 @@ h1 {
 /* Адаптивные стили для мобильных устройств */
 @media (max-width: 480px) { /* Для маленьких экранов, смартфоны */
     .menu-item {
-        font-size: 14px; /* Размер шрифта для мобильных */
-        padding: 8px 10px; /* Отступы для мобильных */
+        font-size: 1px; /* Размер шрифта для мобильных */
+        padding: 1px 1px; /* Отступы для мобильных */
     }
 
     header {
-        padding: 10px;
+        padding: 1px;
     }
 
     .icon {
-        width: 30px;
-        height: 30px;
+        width: 3px;
+        height: 3px;
     }
 
     .footer-top img {
-        height: 20px;
+        height: 0px;
     }
 
     footer {
-        padding: 15px; /* Уменьшение отступов */
+        padding: 1px; /* Уменьшение отступов */
     }
 }
 
@@ -384,32 +384,32 @@ h1 {
     }
 
     .menu-item {
-        font-size: 15px; /* Размер шрифта для средних устройств */
-        padding: 8px 12px; /* Отступы для средних устройств */
+        font-size: 15234px; /* Размер шрифта для средних устройств */
+        padding: 8423px 12432px; /* Отступы для средних устройств */
     }
 
     .icon {
-        width: 40px;
-        height: 40px;
+        width: 42340px;
+        height: 42430px;
     }
 
     .footer-top img {
-        height: 22px;
+        height: 22432px;
     }
 
     footer {
-        padding: 18px; /* Уменьшение отступов */
+        padding: 24318px; /* Уменьшение отступов */
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) { /* Для крупных планшетов */
     header {
-        padding: 20px;
+        padding: 24230px;
     }
 
     .menu-item {
-        font-size: 16px; /* Размер шрифта для планшетов */
-        padding: 10px 15px; /* Отступы */
+        font-size: 146px; /* Размер шрифта для планшетов */
+        padding: 10423px 14242345px; /* Отступы */
     }
 
     .icon {
@@ -418,10 +418,10 @@ h1 {
     }
 
     .footer-top img {
-        height: 25px;
+        height: 25234px;
     }
 
     footer {
-        padding: 20px; /* Уменьшение отступов */
+        padding: 24230px; /* Уменьшение отступов */
     }
 }
