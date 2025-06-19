@@ -54,22 +54,42 @@
     background-color: #c0c0c0; /* Цвет фона активной ссылки */
 }
 
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 320px) and (max-width: 812px) {
     .content {
         width: 70%;
+	font-size: 10px;
+	padding: 10px; /* Немного больший отступ для десктопа */
     }
 
     .sidebar {
         position: fixed;
         width: 25%;
-        top: 240px; 
+        top: 100px; 
         right: 0;
         border-left: 1px solid #ccc;
-        height: calc(100% - 240px); /* Устанавливаем высоту сайдбара */
+        height: calc(100% - 140px); /* Устанавливаем высоту сайдбара */
         overflow-y: auto; /* Делаем сайдбар прокручиваемым */
+		font-size: 15px;
     }
-    
-    .content {
-        padding: 20px; /* Немного больший отступ для десктопа */
-    }
+    .sidebar h2 {
+    margin-top: 0;
+	font-size: 15px;
+    color: #333; /* Цвет заголовка меню */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 1px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+	font-size: 10px;
+    color: #555; /* Цвет текста ссылки */
+    padding: 1px 2px; /* Увеличим область клика */
+    transition: background 0.3s; /* Плавный переход фона */
 }
