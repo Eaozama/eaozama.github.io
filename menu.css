@@ -92,26 +92,3 @@
         padding: 20px; /* Немного больший отступ для десктопа */
     }
 }
-@media (min-width: 268px) and (max-width: 768px) { /* Для средних экранов, смартфоны и маленькие планшеты */
-    header {
-        padding: 5px;
-    }
-
-    .menu-item {
-        font-size: 15px; /* Размер шрифта для средних устройств */
-        padding: 8px 12px; /* Отступы для средних устройств */
-    }
-
-    .icon {
-        width: 130px;
-        height: 130px;
-    }
-
-    .footer-top img {
-        height: 22px;
-    }
-
-    footer {
-        padding: 1px; /* Уменьшение отступов */
-    }
-}
