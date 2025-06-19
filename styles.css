@@ -387,72 +387,33 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для блока */
     opacity: 0.95; /* Небольшая прозрачность */
 }
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0f232a;
-    padding: 1px 1px;
-    color: #eaeaea;
-	z-index: 1;
-}
+    header {
+        padding: 10px; /* Увеличьте отступ для лучшей видимости */
+    }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 1px;
-}
+    .logo {
+        gap: 10px; /* Увеличьте расстояние между логотипом и текстом */
+    }
 
-.icon {
-    width: 10; /* Размер иконки */
-    height: 10px; /* Размер иконки */
-}
+    .icon {
+        width: 24px; /* Увеличьте размер иконки для лучшей видимости */
+        height: 24px; /* Увеличьте размер иконки для лучшей видимости */
+    }
 
-.menu {
-    display: flex;
-    gap: 10px; /* Отступ между элементами меню */
-}
+    .menu {
+        gap: 20px; /* Увеличьте отступ между элементами меню */
+    }
 
-.menu-item {
-    background-color: #0f232a;
-    border: none;
-    color: #eaeaea;
-    padding: 1px 2px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-	font-family: Arial, sans-serif; /* Установка шрифта Arial */
-    font-size: 1px; /* Добавьте для управления размером шрифта */
-}
+    .menu-item {
+        padding: 5px 10px; /* Увеличьте отступ для лучшего кликабельного пространства */
+        font-size: 14px; /* Увеличьте размер шрифта для удобства чтения */
+    }
 
-.menu-item:hover {
-    background-color: #d74a49; /* Цвет при наведении */
-}
+    .dropdown-content {
+        min-width: 100px; /* Увеличьте минимальную ширину выпадающего меню */
+    }
 
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #183e4b;
-    min-width: 1px;
-    z-index: 1;
-    border-radius: 1px;
-}
-
-.dropdown-content a {
-    color: #eaeaea;
-    padding: 1px 1px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #d74a49;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+    .dropdown-content a {
+        padding: 10px; /* Увеличьте отступ для лучшей кликабельности */
+    }
 }
