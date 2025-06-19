@@ -94,7 +94,7 @@
 }
 @media (min-width: 268px) and (max-width: 768px) { /* Для средних экранов, смартфоны и маленькие планшеты */
     header {
-        padding: 15px;
+        padding: 5px;
     }
 
     .menu-item {
@@ -103,8 +103,8 @@
     }
 
     .icon {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
     }
 
     .footer-top img {
@@ -112,6 +112,6 @@
     }
 
     footer {
-        padding: 18px; /* Уменьшение отступов */
+        padding: 1px; /* Уменьшение отступов */
     }
 }
