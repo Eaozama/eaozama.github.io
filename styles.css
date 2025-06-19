@@ -353,14 +353,14 @@ h1 {
 
 
 /* Медиа-запрос для мобильных устройств */
-@media (max-width: 720px) {
+@media (max-width: 320px) {
   body {
     font-size: 14px; /* Уменьшаем размер шрифта для мобильных */
     padding: 10px; /* Уменьшаем отступы */
   }
   /* Основные стили остаются без изменений */
 
-@media (max-width: 720px) {
+@media (max-width: 320px) {
     header {
         padding: 5px 5px; /* Уменьшаем отступы в заголовке для мобильных устройств */
     }
@@ -381,7 +381,7 @@ h1 {
     }
 }
 /* Адаптация под мобильные устройства */
-@media (max-width: 720px) { /* Для экранов шириной до 768px */
+@media (max-width: 320px) { /* Для экранов шириной до 768px */
     .content {
         padding: 10px; /* Уменьшаем отступы для мобильных */
         margin-top: 10px; /* Уменьшаем отступы сверху */
@@ -390,21 +390,21 @@ h1 {
     }
 }
 
-@media (max-width: 720px) { /* Для экранов шириной до 480px */
+@media (max-width: 320px) { /* Для экранов шириной до 480px */
     .content {
         height: auto; /* Убираем фиксированную высоту */
         max-height: none; /* Убираем максимальную высоту */
     }
 }
 /* Изменения для мобильных устройств */
-@media (max-width: 720px) { /* Если ширина экрана меньше 768px */
+@media (max-width: 320px) { /* Если ширина экрана меньше 768px */
     .container2 {
         grid-template-columns: repeat(2, 1fr); /* 2 колонки */
         gap: 15px;
     }
 }
 
-@media (max-width: 720px) { /* Если ширина экрана меньше 480px */
+@media (max-width: 320px) { /* Если ширина экрана меньше 480px */
     .container2 {
         grid-template-columns: 1fr; /* 1 колонка */
         gap: 15px;
@@ -424,7 +424,7 @@ h1 {
     height: 50px;
     margin-bottom: 10px;
 }
-@media (max-width: 720px) {
+@media (max-width: 320px) {
     .dish-card {
         width: 120px; /* Уменьшение ширины для более мелких экранов */
         height: 200px; /* Уменьшение высоты для более мелких экранов */
@@ -442,7 +442,7 @@ h1 {
     }
 
 }
-@media (max-width: 720px) {
+@media (max-width: 320px) {
     .chibi img {
         width: 120px; /* Еще больше уменьшаем размер для очень маленьких экранов */
     }
@@ -462,7 +462,7 @@ h1 {
         padding: 7px 12px; /* Уменьшаем внутренние отступы для кнопок */
     }
 }
-@media (max-width: 720px) {
+@media (max-width: 320px) {
     .chibi img {
         width: 120px; /* Еще больше уменьшаем размер для очень маленьких экранов */
     }
