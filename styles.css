@@ -352,9 +352,17 @@ h1 {
 }
 
 @media (min-width: 320px) and (max-width: 812px) {
-    .chibi img {
-        width: 60px; /* Еще больше уменьшаем размер для очень маленьких экранов */
-    }
+.chibi {
+    position: fixed;
+    bottom: 5px;
+    right: 2px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chibi img {
+    width: 20px; /* размер мини-чибика */
+}
     
     .popup {
         width: 40%; /* Увеличиваем ширину popup на меньших экранах */
