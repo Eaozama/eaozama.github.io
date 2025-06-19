@@ -87,7 +87,7 @@
 }
 
 .game-details {
-    padding: 10px;
+    padding: 5px;
     flex-grow: 1;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .game-genres {
-    font-size: 5px;
+    font-size: 10px;
     color: #666;
 }
 
