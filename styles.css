@@ -369,7 +369,7 @@ h1 {
     .popup a,
     .popup button {
         font-size: 4px; /* Уменьшаем размер шрифта для кнопок */
-        padding: 7px 12px; /* Уменьшаем внутренние отступы для кнопок */
+        padding: 2px 5px; /* Уменьшаем внутренние отступы для кнопок */
     }
 	.container11 {
     display: flex;
@@ -387,17 +387,26 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для блока */
     opacity: 0.95; /* Небольшая прозрачность */
 }
+/* меню сайта началось */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f232a;
+    padding: 5px 8px;
+    color: #eaeaea;
+	z-index: 3;
+}
+
 .logo {
     display: flex;
     align-items: center;
     gap: 5px;
-	    width: 20px; /* Размер иконки */
-    height: 20px; /* Размер иконки */
 }
 
 .icon {
-    width: 15px; /* Размер иконки */
-    height: 15px; /* Размер иконки */
+    width: 30; /* Размер иконки */
+    height: 30px; /* Размер иконки */
 }
 
 .menu {
@@ -409,12 +418,43 @@ h1 {
     background-color: #0f232a;
     border: none;
     color: #eaeaea;
-    padding: 10px 5px;
+    padding: 5px 2px;
     cursor: pointer;
     transition: background-color 0.3s;
 	font-family: Arial, sans-serif; /* Установка шрифта Arial */
-    font-size: 10px; /* Добавьте для управления размером шрифта */
-h1 {
-	font-size: 12px;
+    font-size: 17px; /* Добавьте для управления размером шрифта */
 }
+
+.menu-item:hover {
+    background-color: #d74a49; /* Цвет при наведении */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #183e4b;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #eaeaea;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #d74a49;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* меню сайта закончилось */
 }
