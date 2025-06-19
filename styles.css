@@ -351,30 +351,3 @@ h1 {
     margin-top: 10px;
 }
 
-
-
-/* Адаптивные стили для мобильных устройств */
-@media (max-width: 480px) { /* Для маленьких экранов, смартфоны */
-    .menu-item {
-        font-size: 164px; /* Размер шрифта для мобильных */
-        padding: 8px 10px; /* Отступы для мобильных */
-    }
-
-    header {
-        padding: 10px;
-    }
-
-    .icon {
-        width: 70px;
-        height: 70px;
-    }
-
-    .footer-top img {
-        height: 20px;
-    }
-
-    footer {
-        padding: 15px; /* Уменьшение отступов */
-    }
-}
-
