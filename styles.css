@@ -434,4 +434,15 @@ h1 {
 .video-info {
     margin-top: 100px;
 }
+/* содержимое страницы */
+.container5 {
+    max-width: 900px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+h1 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
 }
