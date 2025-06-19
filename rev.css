@@ -23,7 +23,7 @@ video {
     height: auto; /* Установите высоту на автоматическую */
 }
 }
-@media (max-width: 480px) {
+@media (min-width: 720px) {
 iframe,
 video {
     width: 100%; /* Сделайте ширину iframe или video равной 100% */
