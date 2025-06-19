@@ -356,60 +356,60 @@ h1 {
 /* Адаптивные стили для мобильных устройств */
 @media (max-width: 480px) { /* Для маленьких экранов, смартфоны */
     .menu-item {
-        font-size: 1px; /* Размер шрифта для мобильных */
-        padding: 1px 1px; /* Отступы для мобильных */
+        font-size: 14px; /* Размер шрифта для мобильных */
+        padding: 8px 10px; /* Отступы для мобильных */
     }
 
     header {
-        padding: 1px;
+        padding: 10px;
     }
 
     .icon {
-        width: 3px;
-        height: 3px;
+        width: 30px;
+        height: 30px;
     }
 
     .footer-top img {
-        height: 0px;
+        height: 20px;
     }
 
     footer {
-        padding: 1px; /* Уменьшение отступов */
+        padding: 15px; /* Уменьшение отступов */
     }
 }
 
-@media (min-width: 481px) and (max-width: 768px) { /* Для средних экранов, смартфоны и маленькие планшеты */
+@media (min-width: 268px) and (max-width: 768px) { /* Для средних экранов, смартфоны и маленькие планшеты */
     header {
         padding: 15px;
     }
 
     .menu-item {
-        font-size: 15234px; /* Размер шрифта для средних устройств */
-        padding: 8423px 12432px; /* Отступы для средних устройств */
+        font-size: 15px; /* Размер шрифта для средних устройств */
+        padding: 8px 12px; /* Отступы для средних устройств */
     }
 
     .icon {
-        width: 42340px;
-        height: 42430px;
+        width: 40px;
+        height: 40px;
     }
 
     .footer-top img {
-        height: 22432px;
+        height: 22px;
     }
 
     footer {
-        padding: 24318px; /* Уменьшение отступов */
+        padding: 18px; /* Уменьшение отступов */
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) { /* Для крупных планшетов */
     header {
-        padding: 24230px;
+        padding: 20px;
     }
 
     .menu-item {
-        font-size: 146px; /* Размер шрифта для планшетов */
-        padding: 10423px 14242345px; /* Отступы */
+        font-size: 16px; /* Размер шрифта для планшетов */
+        padding: 10px 15px; /* Отступы */
     }
 
     .icon {
@@ -418,10 +418,10 @@ h1 {
     }
 
     .footer-top img {
-        height: 25234px;
+        height: 25px;
     }
 
     footer {
-        padding: 24230px; /* Уменьшение отступов */
+        padding: 20px; /* Уменьшение отступов */
     }
 }
