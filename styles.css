@@ -387,26 +387,25 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для блока */
     opacity: 0.95; /* Небольшая прозрачность */
 }
-/* меню сайта началось */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #0f232a;
-    padding: 5px 8px;
+    padding: 1px 1px;
     color: #eaeaea;
-	z-index: 3;
+	z-index: 1;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 1px;
 }
 
 .icon {
-    width: 30; /* Размер иконки */
-    height: 30px; /* Размер иконки */
+    width: 10; /* Размер иконки */
+    height: 10px; /* Размер иконки */
 }
 
 .menu {
@@ -418,11 +417,11 @@ header {
     background-color: #0f232a;
     border: none;
     color: #eaeaea;
-    padding: 5px 2px;
+    padding: 1px 2px;
     cursor: pointer;
     transition: background-color 0.3s;
 	font-family: Arial, sans-serif; /* Установка шрифта Arial */
-    font-size: 17px; /* Добавьте для управления размером шрифта */
+    font-size: 1px; /* Добавьте для управления размером шрифта */
 }
 
 .menu-item:hover {
@@ -437,14 +436,14 @@ header {
     display: none;
     position: absolute;
     background-color: #183e4b;
-    min-width: 160px;
+    min-width: 1px;
     z-index: 1;
-    border-radius: 5px;
+    border-radius: 1px;
 }
 
 .dropdown-content a {
     color: #eaeaea;
-    padding: 5px 10px;
+    padding: 1px 1px;
     text-decoration: none;
     display: block;
 }
@@ -456,5 +455,4 @@ header {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-/* меню сайта закончилось */
 }
